@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; ; script-src-attr &#x27;none&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data: blob:; media-src &#x27;self&#x27; data: blob:; font-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;"><meta name="referrer" content="no-referrer">
-<title>Speaking Worlds · 四家英语互动作品</title>
+<title>Speaking Worlds · 一句话开始的互动作品</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f2ea;color:#153d3f;font:17px/1.65 system-ui,sans-serif}
 main{max-width:1060px;margin:auto;padding:64px 24px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;font-size:12px;font-weight:750;color:#526f68}
@@ -11,13 +11,37 @@ article{background:#fffdf8;border:1px solid #d4d8cc;padding:28px;border-radius:1
 h2{font-size:25px;line-height:1.25;margin:4px 0 12px}article p{margin:0 0 18px}article .visit{margin-top:auto}
 a{color:#135c54;text-underline-offset:4px}.visit{display:inline-block;background:#174e49;color:white;border-radius:8px;padding:10px 18px;text-decoration:none;font-weight:650}
 a:focus-visible{outline:3px solid #bd7033;outline-offset:5px}footer{font-size:14px;color:#596963;border-top:1px solid #ced3c7;padding-top:22px}
-@media(max-width:640px){main{padding-top:36px}.grid{grid-template-columns:1fr}}
+.featured{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:28px;margin:36px 0 24px;padding:34px;background:#e8efdf;border-color:#c8d5bd}
+.featured h2{font-size:clamp(28px,4vw,38px)}.featured p{max-width:650px}
+.featured img{width:100%;max-width:180px;height:auto;align-self:center;justify-self:center}
+.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.actions .visit{margin:0}
+.case-notes{margin:26px 0 46px;max-width:790px}.case-notes h2{font-size:23px}.case-notes p{margin:10px 0}
+.small{font-size:14px;color:#52645c}.section-title{font-size:22px;margin:34px 0 -18px}
+@media(max-width:640px){main{padding-top:36px}.grid{grid-template-columns:1fr}.featured{grid-template-columns:1fr;padding:25px}.featured img{display:none}}
 </style></head><body><main>
-<header><p class="eyebrow">English through play · 2026-10-23 snapshot</p>
-<h1>同一个目标，<br>四种表达世界。</h1>
-<p>分别打开各家已做出的英语口语互动原型，比较内容、交互和设计。这里保留它们的真实能力与不足，不把演示页面当成完整教学产品。</p></header>
-<section class="grid" aria-label="四家作品"><article><p class="eyebrow">Legion</p><h2>Sound Seed Island</h2><p>岛屿探索、角色互动、场景动画与本地规则反馈。在线模型对练未接通。</p><a class="visit" href="./legion/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Orca</p><h2>Pip’s Speaking World</h2><p>三段情境任务、浏览器语音识别和卡片／文字退路；反馈主要基于规则。</p><a class="visit" href="./orca/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Paseo</p><h2>Pip’s Speaking World</h2><p>故事场景、引导表达、录音回放与预制故事短片；刷新后录音不会保留。</p><a class="visit" href="./paseo/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">HarnessRouter</p><h2>Space Mail Mission</h2><p>太空送信任务与语义规则互动；没有浏览器语音识别时只能录音回放，不能完成语义任务。</p><a class="visit" href="./harnessrouter/">打开作品 <span aria-hidden="true">↗</span></a></article></section>
-<footer><p>仅供原型试玩，不是已验证有效的教学产品。麦克风由你主动授权；浏览器语音识别可能使用浏览器厂商的在线服务，请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p>
-<p>声音、录音和识别取决于浏览器及你的授权，建议用 Chrome 打开。Legion 的公开版没有连接在线模型，其余三家保留现有静态互动能力。Multica 尚无同题作品，未计入此处。</p>
+<header><p class="eyebrow">Interactive learning · 2026-10-23</p>
+<h1>一个想法，<br>多种可玩的答案。</h1>
+<p>这里收录从真实想法出发做出来的互动作品。打开玩一玩，比看一份介绍更有意思；每个案例也会讲清楚，它现在能做什么、还不能做什么。</p></header>
+<article class="featured" aria-labelledby="lumi-title">
+  <div>
+    <p class="eyebrow">新增案例 · 军团 Harness</p>
+    <h2 id="lumi-title">Lumi · 和猫头鹰一起学</h2>
+    <p>和猫头鹰一起玩无声的 3 关 9 题：水果、动物和颜色。看图点选，答对后可以试着说一个英语词；表达可跳过，不开口也能继续玩。</p>
+    <div class="actions"><a class="visit" href="./lumi/">开始玩 Lumi <span aria-hidden="true">↗</span></a><a href="#lumi-story">看看它怎么做出来</a></div>
+  </div>
+  <img src="./lumi/assets/owl-teacher.png" alt="" width="180" height="180">
+</article>
+<section class="case-notes" id="lumi-story" aria-labelledby="lumi-story-title">
+  <h2 id="lumi-story-title">一句话启动军团 Harness 制作</h2>
+  <p><strong>案例目标：</strong>做一个学前英语口语启蒙作品，让孩子愿意探索、尝试表达，并逐渐学会自己学、讲给别人听。</p>
+  <p>一句话是起点，作品不是一次生成就结束。军团在内部理解需求、设计实现、验证和返工，也吸收后续试用反馈，再回到同一个作品继续改。</p>
+  <p class="small">这是小而完整的首版玩法：固定关卡、有提示的图片选择和可跳过的表达邀请。不是严格的词汇量测评，也不是完整的个性化教学系统；「练过」和点击「我说了」都不等于独立掌握。</p>
+  <p class="small">此处是可独立打开的公开静态试玩版，不连接在线模型，不播放声音、不录音。互动和记录在当前浏览器中完成，请勿填入真实儿童身份资料。软件验收不等于真实儿童学习效果，也不代表已完成长期教学验证。</p>
+  <p class="small">素材说明：Lumi 猫头鹰插画为本项目借助 AI 生成的展示素材（2026年10月21日）。</p>
+</section>
+<h2 class="section-title" id="other-works">也看看其他作品</h2>
+<section class="grid" aria-labelledby="other-works"><article><p class="eyebrow">Legion</p><h2>Sound Seed Island</h2><p>岛屿探索、角色互动、场景动画与本地规则反馈。在线模型对练未接通。</p><a class="visit" href="./legion/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Orca</p><h2>Pip’s Speaking World</h2><p>三段情境任务、浏览器语音识别和卡片／文字退路；反馈主要基于规则。</p><a class="visit" href="./orca/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Paseo</p><h2>Pip’s Speaking World</h2><p>故事场景、引导表达、录音回放与预制故事短片；刷新后录音不会保留。</p><a class="visit" href="./paseo/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">HarnessRouter</p><h2>Space Mail Mission</h2><p>太空送信任务与语义规则互动；没有浏览器语音识别时只能录音回放，不能完成语义任务。</p><a class="visit" href="./harnessrouter/">打开作品 <span aria-hidden="true">↗</span></a></article></section>
+<footer><p>仅供原型试玩，不是已验证有效的教学产品。Lumi 为无声版；其他案例的麦克风由你主动授权，浏览器语音识别可能使用浏览器厂商的在线服务。请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p>
+<p>其他案例的声音、录音和识别取决于浏览器及你的授权。四个既有案例保留原有版本和能力边界；本次新增 Lumi，不将它们的差异包装成能力排名。</p>
 <p>私人开发记录不在本站公开。<a href="https://vortexsean.com/" rel="noopener noreferrer">个人军团网站</a></p></footer>
 </main></body></html>
