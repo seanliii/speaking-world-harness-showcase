@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" role="img" aria-label="Melody the ferry whale">
+  <defs>
+    <linearGradient id="whale" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd8ff"/><stop offset="1" stop-color="#3070ba"/></linearGradient>
+    <radialGradient id="sound" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff9b8"/><stop offset=".6" stop-color="#ffe46b" stop-opacity=".5"/><stop offset="1" stop-color="#ffe46b" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="160" cy="216" rx="112" ry="12" fill="#14324d" opacity=".2"/>
+  <path d="M40 158q9-58 92-61t105 49q12 26-24 38-82 22-151 4-25-8-22-30z" fill="url(#whale)"/>
+  <path d="M231 142q48-13 54-46-36-2-60 31z" fill="#79c7f0"/>
+  <path d="M43 153q-27-10-35-35 31-3 46 23z" fill="#79c7f0"/>
+  <path d="M92 170q55 20 113 1-12 23-57 26t-56-27z" fill="#eaf8ff" opacity=".82"/>
+  <path d="M67 142q37-12 85-3t79 25q-78 23-164 0z" fill="#8ed5ff" opacity=".45"/>
+  <circle cx="209" cy="132" r="11" fill="#233c58"/><circle cx="213" cy="128" r="4" fill="#fff"/>
+  <path d="M187 144q11 12 23 2" fill="none" stroke="#1f3b57" stroke-width="7" stroke-linecap="round"/>
+  <path d="M121 103q8-25 29-16 3 18-11 26zM171 97q12-23 30-11-3 18-19 22z" fill="#76c5e6"/>
+  <circle cx="143" cy="103" r="28" fill="url(#sound)"/>
+  <circle cx="143" cy="103" r="10" fill="#ffe46b"/><circle cx="143" cy="103" r="21" fill="none" stroke="#fff4a6" stroke-width="5" opacity=".7"/>
+  <path d="M74 117q12 15 29 20M100 112q15 15 35 19M184 108q22 4 38 15" fill="none" stroke="#fff8c8" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <path d="M52 158q19 19 46 24M234 151q20 8 40 4" fill="none" stroke="#67b7e6" stroke-width="12" stroke-linecap="round"/>
+  <style>@media (prefers-reduced-motion: no-preference){svg{animation:melodySwim 3s ease-in-out infinite alternate}@keyframes melodySwim{from{transform:translateY(0)}to{transform:translateY(-8px)}}}</style>
+</svg>

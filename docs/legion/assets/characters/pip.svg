@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Pip the red fox">
+  <defs>
+    <radialGradient id="fur" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#ffb36b"/><stop offset="1" stop-color="#e8542d"/></radialGradient>
+    <linearGradient id="satchel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8ee06b"/><stop offset="1" stop-color="#2b8b57"/></linearGradient>
+  </defs>
+  <ellipse cx="120" cy="216" rx="63" ry="11" fill="#1c3b2a" opacity=".18"/>
+  <path d="M74 68c6-31 24-37 34-22 8-18 29-16 36 8 7 24-8 40-35 44-25 4-40-8-35-30z" fill="url(#fur)"/>
+  <path d="M88 48c2 12 7 18 16 21M146 50c-3 11-8 17-16 20" fill="none" stroke="#7d2612" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="120" cy="150" rx="58" ry="52" fill="url(#fur)"/>
+  <ellipse cx="120" cy="170" rx="34" ry="30" fill="#fff2d9"/>
+  <circle cx="101" cy="112" r="10" fill="#25211f"/><circle cx="139" cy="112" r="10" fill="#25211f"/>
+  <circle cx="104" cy="108" r="3.5" fill="#fff"/><circle cx="142" cy="108" r="3.5" fill="#fff"/>
+  <path d="M106 134q14 13 28 0" fill="none" stroke="#8c2e16" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="120" cy="146" rx="7" ry="5" fill="#5c2211"/>
+  <path d="M178 132q35 8 33 43-20 17-47 4z" fill="url(#satchel)"/>
+  <circle cx="190" cy="151" r="7" fill="#a7f07d"/><circle cx="204" cy="167" r="5" fill="#e8ff96"/>
+  <path d="M168 118q27-12 41 6" fill="none" stroke="#e8542d" stroke-width="17" stroke-linecap="round"/>
+  <path d="M71 128q-27-12-41 6" fill="none" stroke="#e8542d" stroke-width="17" stroke-linecap="round"/>
+  <path d="M112 197q8 14 20 0" fill="none" stroke="#8c2e16" stroke-width="9" stroke-linecap="round"/>
+  <path d="M92 197q8 14 20 0M128 197q8 14 20 0" fill="none" stroke="#c8471f" stroke-width="9" stroke-linecap="round"/>
+  <style>@media (prefers-reduced-motion: no-preference){svg{animation:pipFloat 3s ease-in-out infinite alternate}@keyframes pipFloat{from{transform:translateY(0)}to{transform:translateY(-6px)}}}</style>
+</svg>

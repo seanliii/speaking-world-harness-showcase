@@ -1,0 +1,12 @@
+{
+  admin off
+  auto_https off
+}
+:{$PORT:8080} {
+  root * /srv/docs
+  encode gzip zstd
+  file_server
+  header X-Content-Type-Options nosniff
+  header Referrer-Policy no-referrer
+  header Permissions-Policy "camera=(), geolocation=(), microphone=(self)"
+}

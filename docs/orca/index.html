@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; &#x27;sha256-zn/BbkVxc0FWHnCbjqJgwd2Qv5iUYuq7QyU6YJT2A1I=&#x27;; script-src-attr &#x27;none&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data: blob:; media-src &#x27;self&#x27; data: blob:; font-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../release-notice.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pip’s Speaking World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><aside class="release-notice"><details><summary>公开试玩 · Orca · 功能与隐私说明</summary><p>三段情境任务、浏览器语音识别和卡片／文字退路；反馈主要基于规则。</p><p>仅供原型试玩，不是已验证有效的教学产品。麦克风由你主动授权；浏览器语音识别可能使用浏览器厂商的在线服务，请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p><a href="../">返回四家作品对比入口</a></details></aside>
+  <main class="shell">
+    <section class="stage-wrap" aria-live="polite">
+      <video id="scene-video" class="scene-video" playsinline muted loop preload="auto"></video>
+      <div class="scene-overlay">
+        <div class="choice-effect" id="choice-effect" aria-live="polite"></div>
+        <div class="characters">
+          <img id="main-character" class="character main-character" src="assets/media/pip-transparent.png" alt="Pip the penguin">
+          <img id="friend-character" class="character friend-character" src="assets/media/whale-transparent.png" alt="Baby whale">
+        </div>
+        <div class="sparkles" aria-hidden="true"></div>
+        <div class="hud">
+          <div class="star-tray" id="star-tray"></div>
+          <div class="scene-label" id="scene-label">Start</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dialogue-card">
+      <div class="speaker-row">
+        <img id="speaker-avatar" src="assets/media/pip-transparent.png" alt="">
+        <div>
+          <div class="speaker-name" id="speaker-name">Pip</div>
+          <p class="caption" id="caption">Tap Play to start the adventure.</p>
+        </div>
+      </div>
+      <div class="action-area" id="action-area">
+        <button class="primary-button" id="start-button">Play</button>
+      </div>
+      <div class="fallback-input" id="fallback-input" hidden>
+        <label for="typed-utterance">No microphone? Type here</label>
+        <input id="typed-utterance" type="text" placeholder="Type what you want to say">
+        <button class="secondary-button" id="typed-send">Send</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    "use strict";
+    const video = document.getElementById("scene-video");
+    const mainCharacter = document.getElementById("main-character");
+    const friendCharacter = document.getElementById("friend-character");
+    const speakerAvatar = document.getElementById("speaker-avatar");
+    const speakerName = document.getElementById("speaker-name");
+    const caption = document.getElementById("caption");
+    const actionArea = document.getElementById("action-area");
+    const sceneLabel = document.getElementById("scene-label");
+    const starTray = document.getElementById("star-tray");
+    const sparkles = document.querySelector(".sparkles");
+
+    const scenes = [
+      {
+        id:"beach",
+        label:"Scene 1 · Sunny Beach",
+        video:"assets/media/scene-beach.mp4",
+        friend:{src:"assets/media/whale-transparent.png",name:"Whale"},
+        prompt:"Look! A shell has a Talking Star. Which shell do you want?",
+        objects:[
+          {id:"red",label:"Red shell",color:"red",emoji:"🐚",effect:"A red star rises from the shell.",response:"The red shell opens! A star flies out."},
+          {id:"blue",label:"Blue shell",color:"blue",emoji:"🐚",effect:"Bubbles lift a blue star.",response:"The blue shell yawns, then a star floats out!"},
+          {id:"yellow",label:"Yellow shell",color:"yellow",emoji:"🐚",effect:"A warm yellow star glows.",response:"The yellow shell sparkles, and a star pops out!"}
+        ],
+        speak:{text:"I want the {color} shell.",synonyms:["want","like","get","pick","choose","give","have"],success:"The {color} shell opens! A star flies out."},
+        teach:{text:"Hello, Whale!",synonyms:["hello","hi","hey","good morning"],success:"Whale smiles and waves back!"}
+      },
+      {
+        id:"bridge",
+        label:"Scene 2 · Bubbly Bridge",
+        video:"assets/media/scene-bridge.mp4",
+        friend:{src:"assets/media/turtle-transparent.png",name:"Turtle"},
+        prompt:"Turtle wants to cross the river. Which way should we go?",
+        objects:[
+          {id:"bridge",label:"Wooden bridge",color:"brown",emoji:"🌉",effect:"Turtle walks calmly across the bridge.",response:"The wooden bridge holds tight. Turtle starts crossing!"},
+          {id:"boat",label:"Bubble boat",color:"blue",emoji:"🚤",effect:"Fish help push the bubble boat.",response:"A bubble boat appears! Fish help Turtle across."},
+          {id:"path",label:"Flower path",color:"pink",emoji:"🌸",effect:"Petals make a soft path over the water.",response:"Flower petals float together into a path. Turtle hops across!"}
+        ],
+        speak:{text:"Can I help, please?",synonyms:["help","help turtle","can i help","let me help","push","move"],success:"Turtle hears you and starts to cross!"},
+        teach:{text:"Thank you, Turtle!",synonyms:["thank","thanks","thank you","welcome"],success:"Turtle says, “You are welcome!”"}
+      },
+      {
+        id:"cave",
+        label:"Scene 3 · Star Cave",
+        video:"assets/media/scene-cave.mp4",
+        friend:{src:"assets/media/whale-transparent.png",name:"Whale"},
+        prompt:"A birthday star is hiding. Which star should we give Pip?",
+        objects:[
+          {id:"blue",label:"Blue star",color:"blue",emoji:"⭐",effect:"Cool blue light fills the cave.",response:"Beautiful! The blue star makes a cool dance party."},
+          {id:"red",label:"Red star",color:"red",emoji:"⭐",effect:"Warm red light wraps the cave.",response:"Lovely! The red star makes a warm birthday picnic."},
+          {id:"yellow",label:"Yellow star",color:"yellow",emoji:"⭐",effect:"Yellow lanterns wake the crystals.",response:"Bright! The yellow star wakes glowing crystals."}
+        ],
+        speak:{text:"Here you are.",synonyms:["here you are","give","take","this is for you","pick","choose"],success:"The star floats to Pip!"},
+        teach:{text:"Happy birthday, Pip!",synonyms:["happy birthday","yay","happy","celebrate","love"],success:"Pip cheers, “Happy birthday to me!”"}
+      }
+    ];
+
+    let sceneIndex = 0;
+    let step = 0;
+    let stars = 0;
+    let failedAttempts = 0;
+    let recognitionActive = false;
+    let audioContext = null;
+    let activeRecognition = null;
+    let selectedObject = null;
+    let context = {lastIntent:null,lastSlots:{},fallbackCount:0};
+
+    const choiceEffect = document.getElementById("choice-effect");
+    const fallbackInput = document.getElementById("fallback-input");
+    const typedUtterance = document.getElementById("typed-utterance");
+    const typedSend = document.getElementById("typed-send");
+
+    function normalize(text){
+      return String(text || "")
+        .toLowerCase()
+        .replace(/[’']/g,"'")
+        .replace(/\bi'm\b/g,"i am")
+        .replace(/\bdon't\b/g,"do not")
+        .replace(/\bcan't\b/g,"can not")
+        .replace(/\bwon't\b/g,"will not")
+        .replace(/\bblew\b/g,"blue")
+        .replace(/\bwed\b/g,"red")
+        .replace(/\bbrige\b|\bbrig\b/g,"bridge")
+        .replace(/\bbote\b|\bbowt\b/g,"boat")
+        .replace(/\bskared\b/g,"scared")
+        .replace(/\btired\b/g,"sleepy")
+        .trim();
+    }
+
+    function extractSlots(text){
+      const normalized = normalize(text);
+      const slots = {color:null,object:null,action:null,emotion:null};
+      const colorMap = {red:"red",blue:"blue",yellow:"yellow",pink:"pink",brown:"brown"};
+      const objectMap = {shell:"shell",shells:"shell",bridge:"bridge",boat:"boat",path:"path",star:"star",present:"present",whale:"whale",turtle:"turtle",pip:"pip",friend:"friend"};
+      const actionMap = {want:"want",like:"like",get:"get",pick:"pick",choose:"choose",give:"give",take:"take",help:"help",hello:"greet",hi:"greet",hey:"greet",thank:"thank",thanks:"thank",happy:"celebrate",yay:"celebrate",love:"celebrate"};
+      const emotionMap = {happy:"happy",excited:"excited",love:"love",scared:"scared",shy:"shy",sleepy:"sleepy",sad:"sad",worried:"worried",brave:"brave",kind:"kind"};
+      normalized.split(/[^a-z']+/).forEach(word=>{
+        if(colorMap[word]) slots.color = colorMap[word];
+        if(objectMap[word]) slots.object = objectMap[word];
+        if(actionMap[word]) slots.action = actionMap[word];
+        if(emotionMap[word]) slots.emotion = emotionMap[word];
+      });
+      if(/\bhappy birthday\b/.test(normalized)) slots.action = "celebrate";
+      if(/\bthank you\b/.test(normalized)) slots.action = "thank";
+      if(/\bhere you are\b/.test(normalized)) slots.action = "give";
+      return slots;
+    }
+
+    function matchObject(scene,slots){
+      if(scene.id === "beach"){
+        if(slots.color) return scene.objects.find(object=>object.color === slots.color) || null;
+        if(slots.object === "shell") return scene.objects[0];
+      }
+      if(scene.id === "bridge"){
+        if(slots.object === "bridge") return scene.objects.find(object=>object.id === "bridge");
+        if(slots.object === "boat") return scene.objects.find(object=>object.id === "boat");
+        if(slots.object === "path" || slots.color === "pink") return scene.objects.find(object=>object.id === "path");
+      }
+      if(scene.id === "cave"){
+        if(slots.color) return scene.objects.find(object=>object.color === slots.color) || null;
+        if(slots.object === "star") return scene.objects[0];
+      }
+      return null;
+    }
+
+    function interpretChoice(scene,text){
+      const slots = extractSlots(text);
+      const object = matchObject(scene,slots);
+      if(object){
+        return {status:"understood",intent:"choose",slots,object,response:object.response,effect:object.effect};
+      }
+      if(slots.emotion){
+        return {
+          status:"clarify",intent:"comfort",slots,
+          response:`I hear that you feel ${slots.emotion}. You are safe here. Which one would you like?`
+        };
+      }
+      if(slots.action === "greet"){
+        return {status:"clarify",intent:"greet",slots,response:`Hello, friend! I heard you say hello. Now, which one would you like?`};
+      }
+      return {status:"clarify",intent:"unknown",slots,response:"I want to understand you. Which one would you like?"};
+    }
+
+    function interpretExpress(scene,text){
+      const slots = extractSlots(text);
+      const normalized = normalize(text);
+      const target = scene.speak;
+      const hasAction = target.synonyms.some(word=>normalized.includes(word));
+      if(hasAction && (slots.object || slots.color || selectedObject || scene.id === "bridge")){
+        const object = matchObject(scene,slots) || selectedObject;
+        return {status:"understood",intent:"express",slots,object,response:target.success,effect:object ? object.effect : null};
+      }
+      if(slots.emotion){
+        return {status:"clarify",intent:"comfort",slots,response:`I hear you feel ${slots.emotion}. You can still tell me what you want.`};
+      }
+      if(slots.color || slots.object){
+        return {status:"clarify",intent:"partial",slots,response:`I heard ${slots.color || slots.object}. Can you tell me what you want?`};
+      }
+      return {status:"clarify",intent:"unknown",slots,response:"I did not catch that. You can try again or use a card."};
+    }
+
+    function interpretTeach(scene,text){
+      const slots = extractSlots(text);
+      const normalized = normalize(text);
+      const target = scene.teach;
+      if(target.synonyms.some(word=>normalized.includes(word))){
+        return {status:"understood",intent:"social",slots,response:target.success,effect:null};
+      }
+      if(slots.emotion){
+        return {status:"clarify",intent:"comfort",slots,response:`That is a kind feeling. Can you say it to your friend?`};
+      }
+      return {status:"clarify",intent:"unknown",slots,response:"I did not understand yet. You can try again or use a card."};
+    }
+
+    function interpret(scene,step,text){
+      if(step === 0) return interpretChoice(scene,text);
+      if(step === 1) return interpretExpress(scene,text);
+      return interpretTeach(scene,text);
+    }
+
+    function clearAction(){ actionArea.innerHTML = ""; }
+    function button(text,className,handler){
+      const element = document.createElement("button");
+      element.className = className;
+      element.textContent = text;
+      element.onclick = handler;
+      return element;
+    }
+    function showCaption(text,speaker="Pip"){
+      caption.textContent = text;
+      speakerName.textContent = speaker;
+      speakerAvatar.src = speaker === "Whale" || speaker === "Turtle"
+        ? friendCharacter.src
+        : mainCharacter.src;
+    }
+    function speak(text){
+      if(!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      utterance.rate = 0.95;
+      utterance.pitch = 1.08;
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find(voice => voice.lang === "en-US" && /female|kid|child/i.test(voice.name));
+      if(preferred) utterance.voice = preferred;
+      window.speechSynthesis.speak(utterance);
+    }
+    function tone(frequency,duration=0.18,type="sine"){
+      if(!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      oscillator.type = type;
+      oscillator.frequency.value = frequency;
+      gain.gain.setValueAtTime(0.001,audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.12,audioContext.currentTime + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001,audioContext.currentTime + duration);
+      oscillator.connect(gain).connect(audioContext.destination);
+      oscillator.start();
+      oscillator.stop(audioContext.currentTime + duration);
+    }
+    function successSound(){ tone(660,.14,"triangle"); setTimeout(()=>tone(880,.20,"triangle"),130); }
+    function gentleFailSound(){ tone(320,.20,"sine"); }
+    function setScene(){
+      const scene = scenes[sceneIndex];
+      video.src = scene.video;
+      video.play().catch(()=>{});
+      friendCharacter.src = scene.friend.src;
+      friendCharacter.alt = scene.friend.name;
+      sceneLabel.textContent = scene.label;
+      step = 0;
+      failedAttempts = 0;
+      showCaption(scene.prompt);
+      speak(scene.prompt);
+      renderStep();
+    }
+    function renderStep(){
+      clearAction();
+      const scene = scenes[sceneIndex];
+      if(step === 0){
+        scene.objects.forEach(object=>{
+          actionArea.appendChild(button(object.label,"choice-button",()=>handleChoice(object)));
+        });
+      }else if(step === 1){
+        actionArea.appendChild(button("Talk to Pip","mic-button",startRecognition));
+        actionArea.appendChild(button("Use cards","secondary-button",showFallback));
+        const status = document.createElement("span");
+        status.className = "status-text";
+        status.textContent = `Say: ${scene.speak.text.replace("{color}", selectedObject?.color || "red")}`;
+        actionArea.appendChild(status);
+      }else if(step === 2){
+        actionArea.appendChild(button("Teach a friend","mic-button",startRecognition));
+        actionArea.appendChild(button("Use cards","secondary-button",showFallback));
+        const status = document.createElement("span");
+        status.className = "status-text";
+        status.textContent = `Say: ${scene.teach.text}`;
+        actionArea.appendChild(status);
+      }else{ finishScene(); }
+    }
+    function handleChoice(choice){
+      const scene = scenes[sceneIndex];
+      selectedObject = choice;
+      successSound();
+      showCaption(choice.response,scene.friend.name);
+      speak(choice.response);
+      choiceEffect.textContent = choice.emoji;
+      choiceEffect.className = "choice-effect show";
+      step = 1;
+      setTimeout(renderStep,800);
+    }
+    function showFallback(){
+      clearAction();
+      const scene = scenes[sceneIndex];
+      const target = step === 1
+        ? scene.speak.text.replace("{color}",selectedObject?.color || "red")
+        : scene.teach.text;
+      actionArea.appendChild(button(target,"choice-button correct",()=>processUtterance(target,"card")));
+      const note = document.createElement("span");
+      note.className = "status-text";
+      note.textContent = "Card choice is okay. You can try speaking next time.";
+      actionArea.appendChild(note);
+    }
+    function processUtterance(text,mode){
+      const scene = scenes[sceneIndex];
+      const result = interpret(scene,step,text);
+      context.lastIntent = result.intent;
+      context.lastSlots = result.slots;
+      if(result.status === "understood"){
+        failedAttempts = 0;
+        if(result.object) selectedObject = result.object;
+        successSound();
+        const responseText = String(result.response || "").replace(/\{color\}/g, selectedObject?.color || "red");
+        showCaption(responseText,scene.friend.name);
+        speak(responseText);
+        if(result.effect){
+          choiceEffect.textContent = result.object?.emoji || selectedObject?.emoji || "";
+          choiceEffect.className = "choice-effect show";
+        }
+        if(step === 2) earnStar();
+        step += 1;
+        setTimeout(()=>{
+          if(step > 2){
+            if(sceneIndex < scenes.length - 1){ sceneIndex += 1; setScene(); }
+            else showFinale();
+          }else renderStep();
+        },1100);
+      }else{
+        failedAttempts += 1;
+        gentleFailSound();
+        showCaption(result.response,scene.friend.name);
+        speak(result.response);
+        if(failedAttempts >= 2) showFallback();
+        else renderStep();
+      }
+    }
+    function earnStar(){
+      stars += 1;
+      renderStars();
+      const sparkle = document.createElement("div");
+      sparkle.className = "celebrate";
+      sparkle.innerHTML = "<span>⭐</span>";
+      document.querySelector(".stage-wrap").appendChild(sparkle);
+      setTimeout(()=>sparkle.remove(),800);
+    }
+    function renderStars(){
+      starTray.innerHTML = "";
+      for(let index = 0; index < 3; index += 1){
+        const star = document.createElement("span");
+        star.textContent = index < stars ? "⭐" : "☆";
+        if(index < stars) star.classList.add("earned");
+        starTray.appendChild(star);
+      }
+    }
+    function showFinale(){
+      clearAction();
+      sceneLabel.textContent = "Party!";
+      friendCharacter.src = "assets/media/turtle-transparent.png";
+      friendCharacter.alt = "Turtle";
+      showCaption("Happy birthday, Pip! You found three Talking Stars. Play again?");
+      speak("Happy birthday, Pip! You found three Talking Stars. Play again?");
+      actionArea.appendChild(button("Play again","primary-button",restart));
+      actionArea.appendChild(button("Listen again","secondary-button",()=>{
+        speak("Happy birthday, Pip! You found three Talking Stars.");
+      }));
+    }
+    function restart(){ sceneIndex = 0; stars = 0; renderStars(); setScene(); }
+    function startRecognition(){
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if(!SpeechRecognition){
+        showCaption("Speech recognition is not available here. Use a card.");
+        showFallback();
+        return;
+      }
+      if(recognitionActive) return;
+      recognitionActive = true;
+      clearAction();
+      const listening = document.createElement("div");
+      listening.className = "listening-pill";
+      listening.innerHTML = "<i></i> Listening…";
+      actionArea.appendChild(listening);
+      actionArea.appendChild(button("Stop","secondary-button",()=>{ if(activeRecognition) activeRecognition.stop(); }));
+      const scene = scenes[sceneIndex];
+      const target = step === 1 ? scene.speak : scene.teach;
+      const recognition = new SpeechRecognition();
+      activeRecognition = recognition;
+      recognition.lang = "en-US";
+      recognition.interimResults = true;
+      recognition.maxAlternatives = 3;
+      recognition.continuous = false;
+      let transcript = "";
+      recognition.onresult = event=>{
+        transcript = Array.from(event.results).map(result=>result[0].transcript).join(" ");
+        caption.textContent = `I heard: ${transcript}`;
+      };
+      recognition.onerror = ()=>{ recognitionActive = false; processUtterance("","voice"); };
+      recognition.onend = ()=>{ recognitionActive = false; processUtterance(transcript,"voice"); };
+      navigator.mediaDevices.getUserMedia({audio:true})
+        .then(stream=>{ recognition.start(); stream.getTracks().forEach(track=>track.stop()); })
+        .catch(()=>{ recognitionActive = false; showCaption("Microphone is not available. Use a card."); showFallback(); });
+    }
+    function createSparkles(){
+      for(let index = 0; index < 28; index += 1){
+        const sparkle = document.createElement("i");
+        sparkle.style.left = `${Math.random()*100}%`;
+        sparkle.style.animationDelay = `${Math.random()*4}s`;
+        sparkles.appendChild(sparkle);
+      }
+    }
+    document.getElementById("start-button").onclick = ()=>{
+      createSparkles();
+      renderStars();
+      setScene();
+    };
+    typedSend.onclick = ()=>{
+      const text = typedUtterance.value.trim();
+      if(text){
+        processUtterance(text,"typed");
+        typedUtterance.value = "";
+      }
+    };
+    typedUtterance.addEventListener("keydown",event=>{
+      if(event.key === "Enter") typedSend.click();
+    });
+    document.addEventListener("keydown",event=>{
+      if(event.key === "f" && event.metaKey){
+        event.preventDefault();
+        fallbackInput.hidden = !fallbackInput.hidden;
+      }
+    });
+    renderStars();
+  </script>
+</body>
+</html>

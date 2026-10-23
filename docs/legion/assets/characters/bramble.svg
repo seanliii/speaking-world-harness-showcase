@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Bramble the bridge tortoise">
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#97c46b"/><stop offset="1" stop-color="#4c7b3d"/></linearGradient>
+    <linearGradient id="glove" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7a7c0"/><stop offset="1" stop-color="#d95d86"/></linearGradient>
+  </defs>
+  <ellipse cx="120" cy="214" rx="74" ry="11" fill="#1c3b2a" opacity=".18"/>
+  <path d="M52 154q0-59 68-62t68 62q0 26-68 27t-68-27z" fill="url(#shell)"/>
+  <path d="M81 116q20-19 40 0t40 0q6 16 6 30-46 18-92 0 0-16 6-30z" fill="#76a957" opacity=".7"/>
+  <circle cx="95" cy="135" r="9" fill="#f1b6cd"/><circle cx="122" cy="145" r="10" fill="#f1b6cd"/><circle cx="149" cy="133" r="8" fill="#f1b6cd"/>
+  <ellipse cx="120" cy="151" rx="35" ry="31" fill="#cfd991"/>
+  <circle cx="108" cy="140" r="9" fill="#25211f"/><circle cx="132" cy="140" r="9" fill="#25211f"/>
+  <circle cx="111" cy="137" r="3" fill="#fff"/><circle cx="135" cy="137" r="3" fill="#fff"/>
+  <path d="M109 157q11 9 22 0" fill="none" stroke="#687a37" stroke-width="6" stroke-linecap="round"/>
+  <path d="M74 141q-20 19-11 43 23 1 30-23zM166 141q20 19 11 43-23 1-30-23z" fill="#cfd991"/>
+  <path d="M72 164q-15 15-10 28M168 164q15 15 10 28" fill="none" stroke="#a8b76a" stroke-width="13" stroke-linecap="round"/>
+  <path d="M59 185q-18 2-24 18 20 7 34-7zM181 185q18 2 24 18-20 7-34-7z" fill="url(#glove)"/>
+  <path d="M87 173q-7 18 3 32M153 173q7 18-3 32" fill="none" stroke="#cfd991" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="80" cy="192" r="7" fill="#ef7ca2"/><circle cx="160" cy="192" r="7" fill="#ef7ca2"/>
+  <style>@media (prefers-reduced-motion: no-preference){svg{animation:brambleSway 3.5s ease-in-out infinite alternate}@keyframes brambleSway{from{transform:translateY(0)}to{transform:translateY(-4px)}}}</style>
+</svg>

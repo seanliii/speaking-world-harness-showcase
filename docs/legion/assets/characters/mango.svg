@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Mango the market toucan">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d8bd6"/><stop offset="1" stop-color="#194f8b"/></linearGradient>
+    <linearGradient id="beak" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe25b"/><stop offset="1" stop-color="#ff9e2c"/></linearGradient>
+  </defs>
+  <ellipse cx="120" cy="218" rx="65" ry="10" fill="#1c3b2a" opacity=".18"/>
+  <ellipse cx="117" cy="123" rx="52" ry="61" fill="url(#body)"/>
+  <path d="M110 73q6-31 31-33 9 14-3 32-13 19-28 16z" fill="#3d8bd6"/>
+  <path d="M69 188q48 30 96 0-10 22-48 25t-48-25z" fill="#2f76ba"/>
+  <path d="M67 119q-31-24-10-55 35 7 47 36z" fill="url(#beak)"/>
+  <path d="M45 96q27-4 48 9" fill="none" stroke="#d95d18" stroke-width="7" stroke-linecap="round"/>
+  <path d="M168 109q53-12 56 26-33 19-68-6z" fill="#ffd85e"/>
+  <circle cx="160" cy="95" r="11" fill="#25211f"/><circle cx="163" cy="91" r="4" fill="#fff"/>
+  <path d="M76 160q-39 3-48 30 34 14 66-11" fill="#3d8bd6"/>
+  <path d="M34 190q34 14 66-11" fill="#2f76ba"/>
+  <path d="M92 162q-18 20-12 43" fill="none" stroke="#2f76ba" stroke-width="18" stroke-linecap="round"/>
+  <path d="M172 138q38 12 52 40" fill="none" stroke="#2f76ba" stroke-width="18" stroke-linecap="round"/>
+  <path d="M152 115q12 13 1 23" fill="none" stroke="#d95d18" stroke-width="7" stroke-linecap="round"/>
+  <path d="M74 102q12 0 19 10M70 125q15 2 22 12" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+  <style>@media (prefers-reduced-motion: no-preference){svg{animation:mangoBounce 2.2s ease-in-out infinite alternate}@keyframes mangoBounce{from{transform:translateY(0)}to{transform:translateY(-8px) rotate(2deg)}}}</style>
+</svg>

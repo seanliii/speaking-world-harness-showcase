@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Blue the firefly keeper">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff9c8" stop-opacity=".98"/><stop offset=".55" stop-color="#ffd66b" stop-opacity=".55"/><stop offset="1" stop-color="#ffd66b" stop-opacity="0"/></radialGradient>
+    <linearGradient id="blueBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ee9ff"/><stop offset="1" stop-color="#3c8bdc"/></linearGradient>
+  </defs>
+  <circle cx="120" cy="118" r="100" fill="url(#glow)"/>
+  <path d="M58 152q22 30 62 27 42-3 58-35-28-14-60-13-35 1-60 21z" fill="url(#blueBody)"/>
+  <circle cx="120" cy="95" r="37" fill="#9ee9ff"/>
+  <circle cx="108" cy="91" r="8" fill="#25344b"/><circle cx="132" cy="91" r="8" fill="#25344b"/>
+  <circle cx="110" cy="88" r="3" fill="#fff"/><circle cx="134" cy="88" r="3" fill="#fff"/>
+  <path d="M108 108q12 10 24 0" fill="none" stroke="#26486d" stroke-width="6" stroke-linecap="round"/>
+  <path d="M89 60q-14-21 6-26 7 10 3 25zM151 60q14-21-6-26-7 10-3 25z" fill="#7ec6ea"/>
+  <path d="M82 129q-31-3-37-27 27-10 44 12M158 129q31-3 37-27-27-10-44 12z" fill="#cdf5ff" opacity=".78"/>
+  <path d="M168 84q22-2 27-20-19-7-32 7z" fill="#cdf5ff" opacity=".75"/>
+  <path d="M84 83q7 22 32 27t34-17" fill="none" stroke="#5fc5e6" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+  <path d="M94 167q26 14 54 3" fill="none" stroke="#2f6da6" stroke-width="10" stroke-linecap="round"/>
+  <path d="M99 179q22 11 44 2" fill="none" stroke="#2f6da6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M94 166q-10 23 5 40 17-13 12-35zM149 166q12 21 0 39-17-11-14-34z" fill="#8ad8f2" opacity=".72"/>
+  <path d="M101 69h38l-8-21h-22z" fill="#ffe58f"/><path d="M108 48h24v-7h-24z" fill="#c88a2a"/><circle cx="120" cy="42" r="7" fill="#ffd25e"/>
+  <circle cx="120" cy="42" r="16" fill="url(#glow)"/>
+  <style>@media (prefers-reduced-motion: no-preference){svg{animation:blueHover 2.8s ease-in-out infinite alternate}@keyframes blueHover{from{transform:translate(0,0)}to{transform:translate(5px,-8px)}}}</style>
+</svg>

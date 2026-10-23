@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; ; script-src-attr &#x27;none&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data: blob:; media-src &#x27;self&#x27; data: blob:; font-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../release-notice.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A preschool English speaking game with video scenes, recording, listening, and meaningful responses." />
+  <title>Space Mail Mission — English Speaking Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body><aside class="release-notice"><details><summary>公开试玩 · HarnessRouter · 功能与隐私说明</summary><p>太空送信任务与语义规则互动；没有浏览器语音识别时只能录音回放，不能完成语义任务。</p><p>仅供原型试玩，不是已验证有效的教学产品。麦克风由你主动授权；浏览器语音识别可能使用浏览器厂商的在线服务，请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p><a href="../">返回四家作品对比入口</a></details></aside>
+  <div class="app" id="app">
+    <video id="scene-video" class="scene-video" autoplay muted loop playsinline preload="auto"></video>
+    <div class="scene-shade" aria-hidden="true"></div>
+    <div class="scene-objects" id="scene-objects" aria-hidden="true"></div>
+
+    <main class="hud">
+      <header class="topbar">
+        <div class="brand"><span aria-hidden="true">🚀</span> Space Mail Mission</div>
+        <div class="progress" id="progress" aria-label="Mission progress"></div>
+      </header>
+
+      <section id="start-screen" class="panel start-panel">
+        <p class="eyebrow">A real speaking adventure</p>
+        <h1>Help Zibo deliver a birthday surprise</h1>
+        <p class="lead">Moon Grandma is waiting. You will visit a post office, a star market, and a foggy sky. Listen, open your mouth, and tell the characters what to do.</p>
+        <ul class="quick-rules">
+          <li><span aria-hidden="true">🎧</span> Hear the situation</li>
+          <li><span aria-hidden="true">🎤</span> Say the English sentence</li>
+          <li><span aria-hidden="true">✨</span> Change the story</li>
+        </ul>
+        <button id="start-button" class="primary large">Start mission</button>
+        <p class="privacy">Microphone audio stays in this page for replay. Speech-to-text uses your browser's speech engine when available.</p>
+      </section>
+
+      <section id="mission" class="mission hidden">
+        <div class="mission-head">
+          <span class="mission-number" id="mission-number"></span>
+          <h2 id="mission-title"></h2>
+        </div>
+
+        <div class="dialogue-panel">
+          <div class="speaker">
+            <span class="speaker-avatar" id="speaker-avatar" aria-hidden="true"></span>
+            <span class="speaker-name" id="speaker-name"></span>
+          </div>
+          <p class="npc-line" id="npc-line"></p>
+          <p class="mission-goal" id="mission-goal"></p>
+          <div class="cue-cards" id="cue-cards"></div>
+          <div class="model-line" id="model-line"></div>
+          <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="controls">
+          <button id="listen-button" class="secondary">🔊 Hear it</button>
+          <button id="record-button" class="primary">🎤 Record</button>
+          <button id="playback-button" class="secondary" disabled>▶ Hear me</button>
+          <button id="next-button" class="success hidden">➡ Continue</button>
+        </div>
+
+        <div class="recording-state" id="recording-state"></div>
+        <div class="transcript" id="transcript"></div>
+        <audio id="playback" class="playback" controls></audio>
+      </section>
+
+      <section id="finish" class="panel finish-panel hidden">
+        <p class="eyebrow">Mission complete</p>
+        <h1>Moon Grandma smiled!</h1>
+        <p class="lead">You asked politely, chose the right things, and guided the rocket through the fog. Moon Grandma says: “Thank you, brave space speaker!”</p>
+        <div class="badges" aria-label="Badges earned">
+          <span>📦 Polite asker</span>
+          <span>🍎 Kind shopper</span>
+          <span>🧭 Brave pilot</span>
+        </div>
+        <div class="controls center">
+          <button id="story-button" class="primary">🎤 Tell the story</button>
+          <button id="restart-button" class="secondary">🔁 Play again</button>
+        </div>
+        <div class="story-result" id="story-result"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="rules.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

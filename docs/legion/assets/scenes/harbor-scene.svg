@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 640" width="1024" height="640" role="img" aria-label="Quiet harbor scene">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffbf89"/><stop offset=".55" stop-color="#ffe9b9"/><stop offset="1" stop-color="#a9dfe7"/></linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd1d9"/><stop offset="1" stop-color="#2077a3"/></linearGradient>
+  </defs>
+  <rect width="1024" height="640" fill="url(#sky)"/><circle cx="790" cy="120" r="72" fill="#fff2bd" opacity=".9"/>
+  <path d="M0 360q140-65 295-16t285 8 238-34 206 7v315H0z" fill="#6dbf86"/>
+  <path d="M0 420q180-42 317 6t303 6 211-29 193 14v223H0z" fill="url(#sea)"/>
+  <path d="M386 352q92-31 158 3t70 82q-91 35-170 8t-58-93z" fill="#6f8f64"/>
+  <path d="M430 344q72-42 124-4t42 84q-74 22-127-20t-39-60z" fill="#4e7a51"/>
+  <circle cx="474" cy="328" r="17" fill="#7fb269"/><circle cx="510" cy="312" r="23" fill="#66a05a"/><circle cx="548" cy="330" r="16" fill="#7fb269"/>
+  <path d="M104 470h270v27H104zM146 470v-84h29v84zM212 470v-60h28v60zM272 470v-84h29v84z" fill="#8b5d3d"/>
+  <path d="M104 497h270l-26 36H127z" fill="#a9714a"/>
+  <g fill="#f5c76b"><circle cx="154" cy="395" r="17"/><circle cx="224" cy="383" r="14"/><circle cx="282" cy="398" r="18"/></g>
+  <g><ellipse cx="645" cy="488" rx="128" ry="88" fill="#8e7558"/><path d="M522 478q54-60 122-58t122 58z" fill="#b49170"/><ellipse cx="645" cy="488" rx="74" ry="54" fill="#6d8b56"/><path d="M571 478q31-44 74-42t74 42z" fill="#89aa65"/><circle cx="610" cy="469" r="20" fill="#f8e58a"/><circle cx="682" cy="467" r="24" fill="#f8e58a"/></g>
+  <g opacity=".72" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"><path d="M84 540q29 18 59 0t58 0 59 0"/><path d="M688 566q30 17 59 0t59 0"/></g>
+  <style>@media (prefers-reduced-motion: no-preference){.wave{animation:harborWave 4s ease-in-out infinite alternate}.seed{animation:seedPulse 2.4s ease-in-out infinite alternate}@keyframes harborWave{from{transform:translateX(0)}to{transform:translateX(12px)}}@keyframes seedPulse{from{opacity:.65;transform:scale(.98)}to{opacity:.95;transform:scale(1.02)}}}</style>
+  <g class="wave"><path d="M0 592q128-24 256 0t256 0 256 0 256 0v48H0z" fill="#1d678d" opacity=".5"/></g>
+  <g class="seed"><ellipse cx="645" cy="468" rx="22" ry="24" fill="#e9ff8d"/></g>
+</svg>

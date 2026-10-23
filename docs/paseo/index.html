@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; ; script-src-attr &#x27;none&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data: blob:; media-src &#x27;self&#x27; data: blob:; font-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../release-notice.css">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pip's Speaking World · 英语口语森林冒险</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body><aside class="release-notice"><details><summary>公开试玩 · Paseo · 功能与隐私说明</summary><p>故事场景、引导表达、录音回放与预制故事短片；刷新后录音不会保留。</p><p>仅供原型试玩，不是已验证有效的教学产品。麦克风由你主动授权；浏览器语音识别可能使用浏览器厂商的在线服务，请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p><a href="../">返回四家作品对比入口</a></details></aside>
+    <main id="app">
+      <section id="home" class="screen active">
+        <div class="sky">
+          <div class="sun"></div>
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+        </div>
+        <div class="home-copy">
+          <p class="eyebrow">English speaking adventure</p>
+          <h1>Pip's Speaking World</h1>
+          <p class="promise">帮小狐狸 Pip 用英语找到 Cub，一起准备生日惊喜！</p>
+          <div class="home-actions">
+            <button class="primary" id="play-intro">▶ Play intro video</button>
+            <button class="ghost" id="skip-intro">Skip to game</button>
+          </div>
+        </div>
+        <div id="fox-preview" class="fox-preview"></div>
+      </section>
+
+      <section id="intro" class="screen">
+        <div class="video-shell">
+          <video id="intro-video" controls playsinline preload="metadata"></video>
+        </div>
+        <div class="intro-actions">
+          <button class="primary" id="start-game">Start helping Pip</button>
+        </div>
+      </section>
+
+      <section id="game" class="screen">
+        <header class="hud">
+          <button class="icon-button" id="home-button" title="Home">⌂</button>
+          <div id="progress" class="progress"></div>
+          <div id="badges" class="badges"></div>
+        </header>
+        <div id="scene" class="scene"></div>
+        <section class="interaction">
+          <div id="mission" class="mission"></div>
+          <div id="character" class="character"></div>
+          <div class="speech-panel">
+            <div id="speech-state" class="speech-state">Press the big microphone and speak.</div>
+            <button id="mic-button" class="mic-button" aria-label="Record speech">🎙️</button>
+            <p class="privacy-note">The app does not save recordings. Your browser handles speech recognition.</p>
+            <div id="phrase-hints" class="phrase-hints"></div>
+            <button id="listen-model" class="ghost">👂 Listen again</button>
+          </div>
+          <div id="response" class="response"></div>
+        </section>
+      </section>
+
+      <section id="celebrate" class="screen">
+        <div class="celebration-copy">
+          <h1>You found Cub!</h1>
+          <p>Pip, Cub, and their friends can now celebrate together.</p>
+          <div id="review" class="review"></div>
+          <button class="primary" id="play-again">Play again</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 640" width="1024" height="640" role="img" aria-label="Quiet market scene">
+  <defs><linearGradient id="marketSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#40376d"/><stop offset=".65" stop-color="#7c6197"/><stop offset="1" stop-color="#e79a75"/></linearGradient></defs>
+  <rect width="1024" height="640" fill="url(#marketSky)"/><circle cx="164" cy="116" r="66" fill="#ffe8ad" opacity=".85"/>
+  <path d="M0 398q203-50 384-4t339 6 301-33v273H0z" fill="#3e6d5c"/><path d="M0 456h1024v184H0z" fill="#5b8c62"/><path d="M70 458h910v112H70z" fill="#a7754d"/><path d="M70 570h910v28H70z" fill="#c39265"/>
+  <g><path d="M102 442h151v-65q76-45 151 0v65z" fill="#e66a51"/><path d="M139 442h78v-75q-39-26-78 0z" fill="#ffcd6c"/><path d="M202 378q37-18 62 7v57h-62z" fill="#69b96c"/></g>
+  <g><path d="M315 442h151v-65q76-45 151 0v65z" fill="#47a6d8"/><path d="M352 442h78v-75q-39-26-78 0z" fill="#ffcd6c"/><path d="M415 378q37-18 62 7v57h-62z" fill="#e66a51"/></g>
+  <g><path d="M528 442h151v-65q76-45 151 0v65z" fill="#f1b147"/><path d="M565 442h78v-75q-39-26-78 0z" fill="#69b96c"/><path d="M628 378q37-18 62 7v57h-62z" fill="#47a6d8"/></g>
+  <g fill="#ffd971"><circle cx="170" cy="254" r="13"/><circle cx="410" cy="220" r="16"/><circle cx="670" cy="252" r="13"/><circle cx="875" cy="216" r="17"/></g>
+  <g stroke="#ffbc65" stroke-width="10" stroke-linecap="round" opacity=".8"><path d="M166 267v78M406 236v109M666 265v80M871 229v116"/></g>
+  <g><ellipse cx="772" cy="513" rx="61" ry="39" fill="#c8894e"/><ellipse cx="772" cy="513" rx="45" ry="26" fill="#93683b"/><circle cx="752" cy="509" r="14" fill="#e94b3c"/><ellipse cx="793" cy="508" rx="20" ry="12" fill="#ffd93d"/><circle cx="825" cy="513" r="11" fill="#4c7bd4"/></g>
+  <g fill="#7a5432"><rect x="268" y="523" width="120" height="30" rx="13"/><rect x="434" y="523" width="120" height="30" rx="13"/><rect x="600" y="523" width="120" height="30" rx="13"/></g>
+  <style>@media (prefers-reduced-motion: no-preference){.lantern{animation:lanternGlow 2.4s ease-in-out infinite alternate}@keyframes lanternGlow{from{opacity:.65;transform:translateY(0)}to{opacity:1;transform:translateY(-8px)}}}</style>
+  <g class="lantern"><circle cx="170" cy="254" r="24" fill="#ffd971" opacity=".35"/><circle cx="410" cy="220" r="28" fill="#ffd971" opacity=".35"/><circle cx="670" cy="252" r="24" fill="#ffd971" opacity=".35"/><circle cx="875" cy="216" r="28" fill="#ffd971" opacity=".35"/></g>
+</svg>
