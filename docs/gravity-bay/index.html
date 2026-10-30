@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#4ab6d0" />
     <meta name="description" content="和啵啵一起造滑道、试一趟、弄懂能量。真实3D物理探索乐园。" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>重力湾 · 把好奇心滑出去</title>
-    <script type="module" crossorigin src="./assets/index-C4dU_3LE.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-ByIkzSmT.css">
+    <title>重力湾 · 看见高度与速度的关系</title>
+    <script type="module" crossorigin src="./assets/index-Bk8DC41z.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BMYKZ6yu.css">
   </head>
   <body>
     <canvas id="world" aria-label="重力湾三维滑道。空格出发或暂停，方向键左右保持平衡，B刹车，C切换镜头。"></canvas>
@@ -24,10 +24,10 @@
         <span>重力湾<small>GRAVITY BAY</small></span>
       </a>
       <nav aria-label="乐园工具">
-        <button id="open-challenges" class="nav-item"><span aria-hidden="true">✦</span> 探索任务</button>
-        <button id="open-builder" class="nav-item"><span aria-hidden="true">⌁</span> 造一条滑道</button>
+        <button id="open-challenges" class="nav-item"><span aria-hidden="true">✦</span> 学习路线</button>
+        <button id="open-builder" class="nav-item"><span aria-hidden="true">⌁</span> 自由实验</button>
         <button id="open-lab" class="nav-item"><span aria-hidden="true">◴</span> 测量工坊</button>
-        <button id="open-journal" class="nav-item"><span aria-hidden="true">▤</span> 我的发现</button>
+        <button id="open-journal" class="nav-item"><span aria-hidden="true">▤</span> 实验记录</button>
       </nav>
       <div class="top-actions">
         <button id="sound" class="circle-button" aria-label="开启声音" title="声音">♪</button>
@@ -35,13 +35,18 @@
       </div>
     </header>
     <section id="intro" class="intro">
-      <div class="eyebrow"><i></i> 一座可以被你改变的乐园</div>
-      <h1>把好奇心，<br />滑出去。</h1>
-      <p>和啵啵一起，借一段下坡，<br />看看能抵达多高的地方。</p>
-      <div class="intro-actions"><button id="start" class="primary">出发试一趟 <span>↗</span></button><button id="intro-build" class="text-button">先改改滑道</button></div>
-      <small class="intro-note">不用答题才能玩 · 你的每次改造，都会真的改变旅程</small>
+      <div class="eyebrow"><i></i> 物理探究 · 高度、速度与能量</div>
+      <h1>不用推，<br />也能上高台？</h1>
+      <p>帮啵啵到达另一座高台。<br />先观察，再只改一个条件。</p>
+      <div class="intro-learning">
+        <div><span>这节学什么</span><strong>看懂下坡变快、上坡变慢</strong></div>
+        <div><span>你要做什么</span><strong>改起点，用实跑验证自己的想法</strong></div>
+        <div><span>最后试一试</span><strong>说出原因，再换条路线判断</strong></div>
+      </div>
+      <div class="intro-actions"><button id="start" class="primary">开始第一课 <span>→</span></button><button id="intro-build" class="text-button">先自由实验</button></div>
+      <small class="intro-note">有观察、有讲解、有验证 · 自由探索随时保留</small>
     </section>
-    <div id="place-tag" class="place-tag"><span>01</span><div>云朵滑道<small>一段下坡，能借来多少速度？</small></div></div>
+    <div id="place-tag" class="place-tag"><span>01</span><div>学习问题就在眼前<small>不用推，怎样借下坡到达另一座高台？</small></div></div>
     <section id="mission-chip" class="mission-chip" hidden>
       <span class="mission-icon">✦</span><div><small id="mission-label">探索任务</small><strong id="mission-title"></strong></div>
       <button id="mission-detail" aria-label="查看当前探索任务">↗</button>
@@ -67,6 +72,13 @@
     <div id="pause-overlay" class="pause-overlay" hidden><span>云朵也等你一会儿</span><button id="resume" class="primary">继续这一趟 ▶</button></div>
     <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
     <div id="subtitle" class="subtitle" hidden></div>
+    <section id="lesson-coach" class="lesson-coach" aria-label="暂停观察：高度与速度" hidden>
+      <span class="eyebrow">先停一下，看看刚才的变化</span>
+      <h3>高度少了，速度呢？</h3>
+      <div id="checkpoint-data" class="checkpoint-data"></div>
+      <p>这两个读数来自眼前的滑板，不是预演。接着看它上坡时，高度和速度怎样变化。</p>
+      <button id="continue-observation" class="primary">继续观察上坡 →</button>
+    </section>
 
     <aside id="builder" class="drawer builder-drawer" hidden aria-label="轨道建造工具">
       <div class="drawer-heading"><div><span class="eyebrow">造滑道，也试一个问题</span><h2>改一处，试一趟</h2></div><button class="close-button" id="close-builder" aria-label="关闭建造工具">×</button></div>
@@ -76,6 +88,7 @@
         <button data-explore="friction" aria-pressed="false">≈ 加点阻力</button>
       </div>
       <h3 id="explore-question">起点高一点，会有什么不同？</h3>
+      <p id="builder-lesson-goal" class="builder-lesson-goal" hidden></p>
       <div class="route-profile">
         <div><span id="profile-start">起点 52 m</span><span id="profile-goal">拱门 32 m</span></div>
         <svg viewBox="0 0 260 62" role="img" aria-label="从起点到拱门的高度侧影，不是预演结果">
@@ -91,6 +104,7 @@
       <p id="explore-action" class="explore-action">只抬高或降低起点。拱门、背包和阻力先不动。</p>
       <p id="explore-watch" class="explore-watch">看同一个拱门：能不能到？到那里时有多快？</p>
       <details class="fixed-conditions"><summary>这次保持不变的条件</summary><p id="builder-fixed"></p><p id="builder-model-note"></p></details>
+      <details id="builder-prior" class="fixed-conditions"><summary id="builder-prior-title">先认识高度和速度</summary><p id="builder-prior-copy"></p></details>
       <div id="builder-evidence" class="builder-evidence" hidden></div>
       <details id="advanced-builder" class="advanced-builder">
         <summary>自由造轨 · 保存作品 <span aria-hidden="true">＋</span></summary>
@@ -114,23 +128,44 @@
     </section>
 
     <dialog id="challenge-dialog" class="dialog challenge-dialog">
-      <div class="dialog-heading"><div><span class="eyebrow">先有一个想弄明白的问题</span><h2>今天，想试什么？</h2></div><button class="close-button" data-close="challenge-dialog" aria-label="关闭探索任务">×</button></div>
+      <div class="dialog-heading"><div><span class="eyebrow">从观察到解释，再到独立验证</span><h2>我们的学习路线</h2></div><button class="close-button" data-close="challenge-dialog" aria-label="关闭学习路线">×</button></div>
       <div id="challenge-list" class="challenge-list"></div>
-      <p class="micro">任务不会锁住自由建造。完成、提示后成功和独立尝试分别记录，不自动宣布“已掌握”。</p>
+      <p class="micro">推荐先学高度，再认识阻力、比较质量，最后用纸带验证。已有基础可以跳转；引导实验和独立尝试分别记录。</p>
     </dialog>
     <dialog id="prediction-dialog" class="dialog prediction-dialog">
-      <div class="dialog-heading"><div><span class="eyebrow">先停在变化之前</span><h2 id="prediction-title">先猜一猜</h2></div><button class="close-button" data-close="prediction-dialog" aria-label="关闭预测">×</button></div>
+      <div class="dialog-heading"><div><span class="eyebrow" id="lesson-step-label">第一课 · 先知道要研究什么</span><h2 id="prediction-title">先猜一猜</h2></div><button class="close-button" data-close="prediction-dialog" aria-label="关闭预测">×</button></div>
+      <div class="lesson-brief">
+        <p><span>学习目标</span><strong id="lesson-goal"></strong></p>
+        <p><span>先认识</span><span id="lesson-prior"></span></p>
+        <div id="lesson-force" class="force-demo" hidden aria-label="示意：滑板前进方向与本模型阻力相反">
+          <span>阻力 ←</span><b>▰ 滑板</b><span>→ 前进</span><small>固定轨道 · 方向示意，不是实测力的大小</small>
+        </div>
+        <p class="lesson-condition" id="lesson-condition"></p>
+        <p id="lesson-unit" hidden></p>
+      </div>
       <p id="prediction-task"></p>
+      <p class="lesson-watch" id="lesson-watch"></p>
       <div id="prediction-conditions" class="condition-strip"></div>
       <fieldset id="prediction-choices"><legend id="prediction-question">这次能通过拱门吗？</legend><label><input type="radio" name="prediction" value="yes" /> 能通过</label><label><input type="radio" name="prediction" value="no" /> 还差一点</label></fieldset>
       <div id="prediction-confidence" class="micro">可以猜错。改主意的过程，也值得留下来。</div>
-      <div class="dialog-actions"><button id="launch-prediction" class="primary">带着猜想出发 ↗</button><button id="skip-prediction" class="secondary">先随便试试</button></div>
+      <div class="dialog-actions"><button id="launch-prediction" class="primary">带着猜想放手 →</button><button id="skip-prediction" class="secondary">还不确定，先观察</button></div>
+      <button id="read-lesson" class="text-button">♪ 朗读本节引导</button>
       <button id="get-hint" class="text-button">给我一点提示</button><p id="hint-text" class="hint-text" hidden></p>
     </dialog>
     <dialog id="result-dialog" class="dialog result-dialog">
       <div class="dialog-heading"><div><span class="eyebrow" id="result-eyebrow">这次，你看见了什么？</span><h2 id="result-title"></h2></div><button class="close-button" data-close="result-dialog" aria-label="收起本趟结果">×</button></div>
       <p id="result-copy"></p><div id="result-data" class="result-data"></div><p id="prediction-result" class="hint-text"></p>
+      <section id="lesson-conclusion" class="lesson-conclusion" hidden>
+        <h3>把观察接到知识上</h3>
+        <p id="lesson-observed"></p><p id="lesson-explained"></p>
+        <button id="read-explanation" class="text-button">♪ 朗读概念说明</button>
+        <details class="lesson-formulas"><summary>再深入：怎样用式子表示和检验？</summary><p>同一个质量m、同一个高度零点：重力势能 Eₚ = mgh，动能 Eₖ = ½mv²。只有重力做功、导轨约束不做功时，Eₚ + Eₖ 保持不变。</p><p>静止释放后，下降Δh：mgΔh 与 ½mv² 应当相等。纸带实验用相邻点的位置和时间独立量出v，再比较这两项；不是先用守恒算速度再“证明”守恒。</p><p>如果存在本模拟的固定阻力F，走过路程s会把 Fs 的机械能转为内能；高度差Δh和沿轨道的路程s不是同一个量。</p></details>
+        <label for="lesson-notes" id="lesson-reflection"></label>
+        <textarea id="lesson-notes" maxlength="200" placeholder="可以先说给身边的人听，也可以在这里写下自己的解释。"></textarea>
+        <small>不要求背标准话。你的解释会保留，但不会仅凭填写就判断“已掌握”。</small>
+      </section>
       <div class="dialog-actions"><button id="result-retry" class="primary">改一改，再试 ↗</button><button id="result-continue" class="secondary">继续滑，看看会怎样</button></div>
+      <button id="lesson-next" class="primary lesson-next" hidden></button>
       <button id="result-lab" class="text-button">去工坊量一量 →</button>
     </dialog>
     <dialog id="journal-dialog" class="dialog journal-dialog">
@@ -141,7 +176,7 @@
     <dialog id="lab-dialog" class="dialog lab-dialog"></dialog>
     <dialog id="help-dialog" class="dialog help-dialog">
       <div class="dialog-heading"><div><span class="eyebrow">随时可以回来看看</span><h2>在重力湾怎么玩</h2></div><button class="close-button" data-close="help-dialog" aria-label="关闭说明">×</button></div>
-      <div class="help-grid"><section><h3>先滑一趟</h3><p>空格出发或暂停。<kbd>←</kbd><kbd>→</kbd> 让啵啵保持平衡。按住 <kbd>B</kbd> 刹车；<kbd>R</kbd> 回到起点；<kbd>C</kbd> 换镜头。手机可用屏幕按钮。</p></section><section><h3>再改一处</h3><p>打开“造一条滑道”，点金色球，上下拖动或用高度尺。相机空白处拖动可旋转，滚轮缩放；不能通过拖拽修改正在进行的一趟。</p></section><section><h3>看能量去哪里了</h3><p>浅蓝代表高处储存的能量，绿色代表运动，橙色代表阻力和刹车转成的内能。三份合起来不会凭空增加。</p></section><section><h3>真正量一量</h3><p>工坊里先通电，再放开重物。纸带每 0.02 秒记一个点，选三个相邻点比较速度与高度。读数来自模拟，不是真实仪器测量。</p></section></div>
+      <div class="help-grid"><section><h3>先研究一个问题</h3><p>首页“开始第一课”会说明目标、观察条件和动作。空格放手或暂停。<kbd>←</kbd><kbd>→</kbd> 控制平衡；<kbd>B</kbd> 刹车；<kbd>R</kbd> 重试；<kbd>C</kbd> 换镜头。作受控比较时先别刹车。</p></section><section><h3>再改一处</h3><p>打开“自由实验”，选择只改起点、质量或阻力。自由造轨展开后可以点金色球上下拖动。不能在运行的一趟中改条件；记录和解释保留。</p></section><section><h3>看能量去哪里了</h3><p>浅蓝代表与高度相关的重力势能，绿色代表动能，橙色代表阻力和刹车转成的内能。第一次观察后再认识这些名称，不必先背公式才能试。</p></section><section><h3>真正量一量</h3><p>工坊里先通电，再放开重物。纸带每 0.02 秒记一个点，选三个相邻点比较速度与高度。读数来自模拟，不是真实仪器测量。</p></section></div>
       <details open><summary>这次物理模型的边界</summary><p>这是沿固定导轨运动的滑车模型，质量包含角色与滑板，忽略轮子转动能，不会脱轨；水膜、毛绒、左右平衡是视觉表现，没有额外推进力。所有高度以同一零面计算。暂停、录像帧率和模型时间不混为一谈。</p></details>
       <p class="source-note">学习内容改编自铜匠实验室（铜匠十点睡觉）“验证机械能守恒定律”（<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer">CC BY-NC 4.0</a>）。<a href="https://lab.tongjiang.app/c/energy-step/" target="_blank" rel="noreferrer">查看原实验</a> · <a href="./notices.txt" target="_blank" rel="noreferrer">来源与改编说明</a>。非商业研究与免费试玩。软件完成不代表已证明儿童学习效果。</p>
     </dialog>

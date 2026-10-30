@@ -1,9 +1,9 @@
 {
   "name": "gravity-bay",
   "version": "0.1.0",
-  "sourceCommit": "ba824c33e1b483533ff201721769a4a46319376b",
+  "sourceCommit": "ac602c24146ff238fbcd7a450f0645061d09711d",
   "sourceDirty": false,
   "sourceScope": "runtime-and-build-inputs",
-  "builtAt": "2026-10-30T15:42:41.728Z",
+  "builtAt": "2026-10-30T16:21:22.500Z",
   "capability": "single-player-static-physics-playground"
 }
