@@ -1,0 +1,41 @@
+# 来源与改编
+
+本项目的学习内容参考铜匠实验室（作者：铜匠十点睡觉）的“实验：验证机械能守恒定律”：
+
+- 仓库：https://github.com/smithjohn78390/tongjiang-lab
+- 原课程：https://lab.tongjiang.app/c/energy-step/
+- 原文件：`reference/energy-step.html`
+- 原许可：CC BY-NC 4.0，副本见 `reference/tongjiang-LICENSE`。
+- 许可说明：https://creativecommons.org/licenses/by-nc/4.0/
+- 第三方组件声明见 `reference/tongjiang-NOTICES.md`。
+
+改动：将机械能关系迁移到自行设计的三维滑道游戏；重写游戏代码与实验操作界面，保留纸带测速、能量对比、阻力偏差与作图方法。模拟数值不是真实仪器数据，不证明实际学习效果。本作品供非商业研究与免费试玩，不包含销售或付费功能；商业使用原内容需另核授权。
+
+用户提供的滑道截图仅作私人制作参考，不作为第三方授权证明。自制概念图来自本机图像工具，自制角色、模型、场景代码的制作记录保存在项目中。
+
+Three.js 使用 MIT 许可，Vite 使用 MIT 许可，Playwright 使用 Apache-2.0 许可；各包许可保留在所安装依赖中。
+
+
+--- Three.js MIT License ---
+
+The MIT License
+
+Copyright © 2010-2026 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
