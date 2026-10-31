@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#4ab6d0" />
-    <meta name="description" content="和啵啵一起造滑道、试一趟、弄懂能量。真实3D物理探索乐园。" />
+    <meta name="description" content="先在2D实验台看清高度、速度与能量，再把同一个实验带进3D。和啵啵一起动手、比较、弄明白。" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>重力湾 · 看见高度与速度的关系</title>
-    <script type="module" crossorigin src="./assets/index-Bk8DC41z.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BMYKZ6yu.css">
+    <script type="module" crossorigin src="./assets/index-DFAy_Qa5.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-CRzLMJPS.js">
   </head>
   <body>
+    <div id="legacy-app" hidden>
     <canvas id="world" aria-label="重力湾三维滑道。空格出发或暂停，方向键左右保持平衡，B刹车，C切换镜头。"></canvas>
     <div id="loading" role="status">
       <div class="loading-sun"><i></i><i></i><i></i></div>
@@ -180,5 +181,6 @@
       <details open><summary>这次物理模型的边界</summary><p>这是沿固定导轨运动的滑车模型，质量包含角色与滑板，忽略轮子转动能，不会脱轨；水膜、毛绒、左右平衡是视觉表现，没有额外推进力。所有高度以同一零面计算。暂停、录像帧率和模型时间不混为一谈。</p></details>
       <p class="source-note">学习内容改编自铜匠实验室（铜匠十点睡觉）“验证机械能守恒定律”（<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noreferrer">CC BY-NC 4.0</a>）。<a href="https://lab.tongjiang.app/c/energy-step/" target="_blank" rel="noreferrer">查看原实验</a> · <a href="./notices.txt" target="_blank" rel="noreferrer">来源与改编说明</a>。非商业研究与免费试玩。软件完成不代表已证明儿童学习效果。</p>
     </dialog>
+    </div>
   </body>
 </html>
