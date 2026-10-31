@@ -1,47 +1,201 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;self&#x27; ; script-src-attr &#x27;none&#x27;; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data: blob:; media-src &#x27;self&#x27; data: blob:; font-src &#x27;self&#x27;; connect-src &#x27;none&#x27;; object-src &#x27;none&#x27;; frame-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;"><meta name="referrer" content="no-referrer">
-<title>Speaking Worlds · 一句话开始的互动作品</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#f5f2ea;color:#153d3f;font:17px/1.65 system-ui,sans-serif}
-main{max-width:1060px;margin:auto;padding:64px 24px}.eyebrow{letter-spacing:.13em;text-transform:uppercase;font-size:12px;font-weight:750;color:#526f68}
-h1{font-size:clamp(36px,6vw,64px);line-height:1.1;letter-spacing:-.04em;margin:12px 0 24px}header>p{max-width:720px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:38px 0}
-article{background:#fffdf8;border:1px solid #d4d8cc;padding:28px;border-radius:16px;display:flex;flex-direction:column;align-items:flex-start}
-h2{font-size:25px;line-height:1.25;margin:4px 0 12px}article p{margin:0 0 18px}article .visit{margin-top:auto}
-a{color:#135c54;text-underline-offset:4px}.visit{display:inline-block;background:#174e49;color:white;border-radius:8px;padding:10px 18px;text-decoration:none;font-weight:650}
-a:focus-visible{outline:3px solid #bd7033;outline-offset:5px}footer{font-size:14px;color:#596963;border-top:1px solid #ced3c7;padding-top:22px}
-.featured{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:28px;margin:36px 0 24px;padding:34px;background:#e8efdf;border-color:#c8d5bd}
-.featured h2{font-size:clamp(28px,4vw,38px)}.featured p{max-width:650px}
-.featured img{width:100%;max-width:180px;height:auto;align-self:center;justify-self:center}
-.actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.actions .visit{margin:0}
-.case-notes{margin:26px 0 46px;max-width:790px}.case-notes h2{font-size:23px}.case-notes p{margin:10px 0}
-.small{font-size:14px;color:#52645c}.section-title{font-size:22px;margin:34px 0 -18px}
-@media(max-width:640px){main{padding-top:36px}.grid{grid-template-columns:1fr}.featured{grid-template-columns:1fr;padding:25px}.featured img{display:none}}
-</style></head><body><main>
-<header><p class="eyebrow">Interactive learning · 2026-10-23</p>
-<h1>一个想法，<br>多种可玩的答案。</h1>
-<p>这里收录从真实想法出发做出来的互动作品。打开玩一玩，比看一份介绍更有意思；每个案例也会讲清楚，它现在能做什么、还不能做什么。</p></header>
-<article class="featured" aria-labelledby="lumi-title">
-  <div>
-    <p class="eyebrow">新增案例 · 军团 Harness</p>
-    <h2 id="lumi-title">Lumi · 和猫头鹰一起学</h2>
-    <p>和猫头鹰一起玩无声的 3 关 9 题：水果、动物和颜色。看图点选，答对后可以试着说一个英语词；表达可跳过，不开口也能继续玩。</p>
-    <div class="actions"><a class="visit" href="./lumi/">开始玩 Lumi <span aria-hidden="true">↗</span></a><a href="#lumi-story">看看它怎么做出来</a></div>
-  </div>
-  <img src="./lumi/assets/owl-teacher.png" alt="" width="180" height="180">
-</article>
-<section class="case-notes" id="lumi-story" aria-labelledby="lumi-story-title">
-  <h2 id="lumi-story-title">一句话启动军团 Harness 制作</h2>
-  <p><strong>案例目标：</strong>做一个学前英语口语启蒙作品，让孩子愿意探索、尝试表达，并逐渐学会自己学、讲给别人听。</p>
-  <p>一句话是起点，作品不是一次生成就结束。军团在内部理解需求、设计实现、验证和返工，也吸收后续试用反馈，再回到同一个作品继续改。</p>
-  <p class="small">这是小而完整的首版玩法：固定关卡、有提示的图片选择和可跳过的表达邀请。不是严格的词汇量测评，也不是完整的个性化教学系统；「练过」和点击「我说了」都不等于独立掌握。</p>
-  <p class="small">此处是可独立打开的公开静态试玩版，不连接在线模型，不播放声音、不录音。互动和记录在当前浏览器中完成，请勿填入真实儿童身份资料。软件验收不等于真实儿童学习效果，也不代表已完成长期教学验证。</p>
-  <p class="small">素材说明：Lumi 猫头鹰插画为本项目借助 AI 生成的展示素材（2026年10月21日）。</p>
-</section>
-<h2 class="section-title" id="other-works">也看看其他作品</h2>
-<section class="grid" aria-labelledby="other-works"><article><p class="eyebrow">Legion</p><h2>Sound Seed Island</h2><p>岛屿探索、角色互动、场景动画与本地规则反馈。在线模型对练未接通。</p><a class="visit" href="./legion/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Orca</p><h2>Pip’s Speaking World</h2><p>三段情境任务、浏览器语音识别和卡片／文字退路；反馈主要基于规则。</p><a class="visit" href="./orca/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">Paseo</p><h2>Pip’s Speaking World</h2><p>故事场景、引导表达、录音回放与预制故事短片；刷新后录音不会保留。</p><a class="visit" href="./paseo/">打开作品 <span aria-hidden="true">↗</span></a></article><article><p class="eyebrow">HarnessRouter</p><h2>Space Mail Mission</h2><p>太空送信任务与语义规则互动；没有浏览器语音识别时只能录音回放，不能完成语义任务。</p><a class="visit" href="./harnessrouter/">打开作品 <span aria-hidden="true">↗</span></a></article></section>
-<footer><p>仅供原型试玩，不是已验证有效的教学产品。Lumi 为无声版；其他案例的麦克风由你主动授权，浏览器语音识别可能使用浏览器厂商的在线服务。请勿输入真实儿童身份资料。本发布包不含私人对话、公司凭据或收费模型接口。</p>
-<p>其他案例的声音、录音和识别取决于浏览器及你的授权。四个既有案例保留原有版本和能力边界；本次新增 Lumi，不将它们的差异包装成能力排名。</p>
-<p>私人开发记录不在本站公开。<a href="https://vortexsean.com/" rel="noopener noreferrer">个人军团网站</a></p></footer>
-</main></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f2ea">
+  <meta name="description" content="六个可以打开体验的互动学习作品。统一展示玩法、制作方式和真实能力边界，记录 Codex 与人工持续迭代的过程。">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>互动学习作品集 · 六个可玩的案例</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root { color-scheme: light; --ink: #153d3f; --muted: #556a63; --line: #d4d8cc; --paper: #fffdf8; --green: #174e49; }
+    body { margin: 0; background: #f5f2ea; color: var(--ink); font: 16px/1.65 system-ui, sans-serif; }
+    a { color: var(--green); text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #ad5d24; outline-offset: 5px; }
+    .skip-link { position: absolute; top: 12px; left: 20px; z-index: 2; padding: 10px 16px; background: var(--paper); transform: translateY(-160%); }
+    .skip-link:focus { transform: none; }
+    main { max-width: 1200px; margin: auto; padding: 38px 32px 48px; }
+    .masthead { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 15px; font-weight: 750; letter-spacing: .04em; }
+    .masthead nav { display: flex; gap: 24px; font-size: 14px; }
+    .masthead a { text-decoration: none; }
+    .hero { padding: 36px 0 30px; }
+    .eyebrow { margin: 0 0 12px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0 0 20px; font-size: clamp(34px, 4.4vw, 54px); line-height: 1.2; letter-spacing: -.04em; }
+    .hero > p:last-child { max-width: 720px; margin: 0; color: var(--muted); }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+    .section-heading h2 { font-size: 18px; margin: 0; }
+    .count { flex-shrink: 0; margin: 0; color: var(--muted); font-size: 13px; }
+    #works, #making, #lumi-story { scroll-margin-top: 24px; }
+    .works-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .work-card { min-width: 0; display: flex; flex-direction: column; align-items: stretch; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; }
+    .work-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+    .work-maker { margin: 0; font-size: 12px; font-weight: 750; letter-spacing: .03em; }
+    .work-kind { margin: 0; padding: 4px 9px; border-radius: 5px; background: #edf1e6; color: #455f52; font-size: 11px; white-space: nowrap; }
+    .work-card h3 { min-height: 2.5em; margin: 0 0 12px; font-size: 24px; line-height: 1.25; letter-spacing: -.025em; overflow-wrap: anywhere; }
+    .work-summary { min-height: 5.25em; margin: 0 0 20px; color: #3d5653; font-size: 15px; line-height: 1.75; }
+    .work-status { min-height: 5.6em; margin: auto 0 20px; padding-top: 14px; border-top: 1px solid #e4e6de; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .work-status strong { display: block; margin-bottom: 4px; color: #284f47; font-weight: 650; }
+    .work-actions { display: flex; margin-top: auto; }
+    .visit { display: inline-flex; justify-content: space-between; align-items: center; gap: 20px; width: 100%; min-height: 44px; padding: 10px 14px; border-radius: 8px; background: var(--green); color: #fff; font-size: 14px; font-weight: 650; text-decoration: none; }
+    .visit:hover { background: #22645c; }
+    .making { margin-top: 40px; }
+    .making > h2 { font-size: 22px; margin: 0 0 18px; }
+    .notes-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .case-notes { border-top: 2px solid #bdc9b8; padding-top: 20px; }
+    .case-notes h3 { margin: 0 0 10px; font-size: 19px; line-height: 1.5; }
+    .case-notes p { margin: 10px 0; font-size: 14px; color: var(--muted); }
+    .case-notes .case-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 650; }
+    .case-notes summary { padding: 10px 0; cursor: pointer; font-size: 14px; font-weight: 650; }
+    .case-notes img { float: right; width: 76px; height: 76px; margin: 0 0 10px 16px; object-fit: contain; }
+    footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    footer p { margin: 8px 0; }
+    @media (max-width: 960px) {
+      .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      main { padding: 22px 20px 32px; }
+      .masthead { align-items: flex-start; gap: 12px; }
+      .masthead nav { gap: 14px; font-size: 12px; }
+      .brand { font-size: 13px; }
+      .hero { padding: 28px 0; }
+      .hero > p:last-child { font-size: 14px; }
+      .works-grid, .notes-grid { grid-template-columns: 1fr; gap: 16px; }
+      .work-card { padding: 22px; }
+      .work-card h3 { min-height: 0; }
+      .work-summary, .work-status { min-height: 0; }
+      .section-heading { gap: 10px; }
+      .section-heading h2 { font-size: 16px; }
+      .count { font-size: 12px; }
+      .notes-grid { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#works">跳到作品</a>
+  <main>
+    <div class="masthead">
+      <span class="brand">互动学习 · 作品集</span>
+      <nav aria-label="页面导航">
+        <a href="#works">全部作品</a>
+        <a href="#making">制作过程</a>
+        <a href="/benchmarks/">军团实测</a>
+      </nav>
+    </div>
+    <header class="hero">
+      <p class="eyebrow">Interactive learning · 持续打磨中</p>
+      <h1>一个想法，<br>多种可玩的答案。</h1>
+      <p>从故事、游戏和动手探索开始，让学习多一种可能。选一个作品亲自试试；每张卡片都讲清楚，当前能体验什么、还有什么没有做完。</p>
+    </header>
+
+    <section id="works" aria-labelledby="works-title">
+      <div class="section-heading">
+        <h2 id="works-title">选一个世界，开始探索</h2>
+        <p class="count">共 6 个作品 · 均为试玩版</p>
+      </div>
+      <div class="works-grid">
+        <article class="work-card" data-work="xingya" aria-labelledby="xingya-title">
+          <div class="work-heading">
+            <p class="work-maker">01 / Codex × 人工</p>
+            <p class="work-kind">数学探索</p>
+          </div>
+          <h3 id="xingya-title">星芽 · 数学探索</h3>
+          <p class="work-summary">走进故事，改变实验条件，挑战数学与编程问题。重要的不只是答对，还要能讲明白、教会别人。</p>
+          <p class="work-status"><strong>合成试玩档案 · 云端保存</strong>任务、解释与提示真实记录；不连接在线模型，讲解评阅待确认。</p>
+          <div class="work-actions"><a class="visit" href="/xingya/" aria-label="打开作品：星芽 · 数学探索">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="work-card" data-work="lumi" aria-labelledby="lumi-title">
+          <div class="work-heading">
+            <p class="work-maker">02 / 军团 Harness</p>
+            <p class="work-kind">英语启蒙</p>
+          </div>
+          <h3 id="lumi-title">Lumi · 和猫头鹰一起学</h3>
+          <p class="work-summary">和猫头鹰玩水果、动物、颜色的 3 关 9 题。看图点选，再试着说一个词；不想开口也能继续。</p>
+          <p class="work-status"><strong>无声图片游戏 · 本机记录</strong>不播放声音、不录音、不连接在线模型；表达可以跳过。</p>
+          <div class="work-actions"><a class="visit" href="/lumi/" aria-label="打开作品：Lumi · 和猫头鹰一起学">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="work-card" data-work="legion" aria-labelledby="legion-title">
+          <div class="work-heading">
+            <p class="work-maker">03 / Legion</p>
+            <p class="work-kind">岛屿探索</p>
+          </div>
+          <h3 id="legion-title">Sound Seed Island</h3>
+          <p class="work-summary">在小岛上遇见角色，跟着场景动画探索声音与表达。用一个个小任务，尝试把英语用起来。</p>
+          <p class="work-status"><strong>场景互动 · 规则反馈</strong>当前反馈来自本地规则；在线模型对练未接通。</p>
+          <div class="work-actions"><a class="visit" href="/legion/" aria-label="打开作品：Sound Seed Island">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="work-card" data-work="orca" aria-labelledby="orca-title">
+          <div class="work-heading">
+            <p class="work-maker">04 / Orca</p>
+            <p class="work-kind">情境表达</p>
+          </div>
+          <h3 id="orca-title">Pip’s Speaking World</h3>
+          <p class="work-summary">跟着 Pip 进入三段情境任务。尝试说出想法，也可以通过卡片或文字继续完成互动。</p>
+          <p class="work-status"><strong>语音识别 · 卡片与文字退路</strong>识别取决于浏览器与授权；任务反馈主要基于规则。</p>
+          <div class="work-actions"><a class="visit" href="/orca/" aria-label="打开作品：Pip’s Speaking World，Orca 版">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="work-card" data-work="paseo" aria-labelledby="paseo-title">
+          <div class="work-heading">
+            <p class="work-maker">05 / Paseo</p>
+            <p class="work-kind">故事表达</p>
+          </div>
+          <h3 id="paseo-title">Pip’s Speaking World</h3>
+          <p class="work-summary">从故事场景出发，跟随引导表达，录下自己的声音再听一遍。还可以观看预制故事短片。</p>
+          <p class="work-status"><strong>录音回放 · 预制短片</strong>录音需要主动授权；刷新不保留录音，不是云端学习档案。</p>
+          <div class="work-actions"><a class="visit" href="/paseo/" aria-label="打开作品：Pip’s Speaking World，Paseo 版">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="work-card" data-work="harnessrouter" aria-labelledby="harnessrouter-title">
+          <div class="work-heading">
+            <p class="work-maker">06 / HarnessRouter</p>
+            <p class="work-kind">太空任务</p>
+          </div>
+          <h3 id="harnessrouter-title">Space Mail Mission</h3>
+          <p class="work-summary">成为太空送信员，在任务中练习表达。通过语义规则互动，尝试把信息送到正确的地方。</p>
+          <p class="work-status"><strong>语义规则 · 依赖语音识别</strong>没有语音识别时只支持录音回放，不能完成语义任务。</p>
+          <div class="work-actions"><a class="visit" href="/harnessrouter/" aria-label="打开作品：Space Mail Mission">打开作品 <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="making" id="making" aria-labelledby="making-title">
+      <h2 id="making-title">作品背后，不只有一句提示</h2>
+      <div class="notes-grid">
+        <section class="case-notes" aria-labelledby="xingya-story-title">
+          <p class="eyebrow">星芽 · 协作手记</p>
+          <h3 id="xingya-story-title">Codex 实现，人工持续体验、调整与纠偏</h3>
+          <p>人工提出目标、指出不足、反复试用；Codex 编写代码、运行测试、修复原作品。从计算到故事与更广课程，每一次调整都要回到实际操作和学习证据。</p>
+          <p>项目介绍与复盘记录了优化过程、工具做得好和不好的地方，以及尚未补齐的内容。不把持续的人机协作包装成一次提示后的自动成品。</p>
+          <a class="case-link" href="/xingya/case/">阅读项目介绍与协作复盘 <span aria-hidden="true">↗</span></a>
+        </section>
+        <section class="case-notes" id="lumi-story" aria-labelledby="lumi-story-title">
+          <img src="/lumi/assets/owl-teacher.png" alt="" width="76" height="76" loading="lazy" decoding="async">
+          <p class="eyebrow">Lumi · 制作案例</p>
+          <h3 id="lumi-story-title">一句话启动军团 Harness 制作</h3>
+          <p><strong>案例目标：</strong>做一个学前英语口语启蒙作品，让孩子愿意探索、尝试表达，并逐渐学会自己学、讲给别人听。</p>
+          <p>一句话是起点，作品不是一次生成就结束。军团在内部理解需求、设计实现、验证和返工，也吸收后续试用反馈，再回到同一个作品继续改。</p>
+          <details>
+            <summary>阅读玩法、素材与验收边界</summary>
+            <p>这是小而完整的首版玩法：固定关卡、有提示的图片选择和可跳过的表达邀请。不是严格的词汇量测评，也不是完整的个性化教学系统；「练过」和点击「我说了」都不等于独立掌握。</p>
+            <p>此处是可独立打开的公开静态试玩版，不连接在线模型，不播放声音、不录音。互动和记录在当前浏览器中完成，请勿填入真实儿童身份资料。软件验收不等于真实儿童学习效果，也不代表已完成长期教学验证。</p>
+            <p>素材说明：Lumi 猫头鹰插画为本项目借助 AI 生成的展示素材（2026年10月21日）。</p>
+          </details>
+        </section>
+      </div>
+    </section>
+
+    <footer>
+      <p>这些是持续迭代的试玩作品，不代表已经验证了学习效果。课程覆盖、独立掌握、竞赛能力与真实儿童成效需要分别验证，不能由“答对”或“玩过”推断。</p>
+      <p>请勿输入真实儿童身份资料。星芽只提供合成示例，示例记录保存在服务器；其他作品保留原有能力与保存方式。麦克风由你主动授权，浏览器语音识别可能使用厂商在线服务。</p>
+      <p>本站不公开私人对话、公司凭据或私人模型接口。六个作品的展示顺序不代表能力排名。<a href="https://vortexsean.com/" rel="noopener noreferrer">个人军团网站</a></p>
+    </footer>
+  </main>
+</body>
+</html>

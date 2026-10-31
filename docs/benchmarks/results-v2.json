@@ -1,0 +1,530 @@
+{
+  "schema": "legion-public-benchmark-v1",
+  "experiment": "V2",
+  "completed_runs": 416,
+  "distinct_tasks": 32,
+  "participant_count": 13,
+  "correct_runs": 188,
+  "runtime_failures": 170,
+  "completed_but_incorrect": 58,
+  "official_leaderboard": false,
+  "seed": 20261030,
+  "model": {
+    "requested": "deepseek-v4-flash",
+    "receipts": [
+      "deepseek-flash",
+      "deepseek-v4-flash"
+    ],
+    "description": "V4.1 Flash 别名通路；非远端权重认证",
+    "locking": "实验代理统一模型，不等于产品原生全流程锁模"
+  },
+  "limits": {
+    "wall_seconds_per_run": 240,
+    "model_requests_per_run": 48,
+    "output_tokens_per_run": 32768,
+    "output_tokens_per_request": 4096,
+    "input_tokens_stop_accepting_requests": 524288,
+    "shared_retrieval_calls_per_run": 24,
+    "individual_workers": 9,
+    "mode_workers": 3,
+    "maximum_model_connections": 9
+  },
+  "scope": [
+    "独立成员指军团接入层中的单成员，不是各上游项目最佳配置的官方测试。",
+    "同一冻结样本；不同原生提示词和工具保留，比较接入组合。",
+    "GAIA 仅无附件题；BrowseComp 取自历史40题样本；SimpleQA允许搜索。",
+    "HumanEval仅4道函数题，不是高难工程修复评测。",
+    "BC/Search采用官方模板与本次指定模型判分，不是官方评委榜单。",
+    "超过实验限额算未完成，不代表更大预算下必然失败。",
+    "时间包括启动、失败及并发竞争，不能视作纯算法速度。",
+    "输入统计包含重复历史和缓存，用量不等于实际付款。",
+    "旧隔离配置有误，V1整批作废；所有对象均按V2重跑，不择优拼分。",
+    "不发布原题、标准答案、私有回复、会话、内部源码或模型凭据。"
+  ],
+  "retained_code": {
+    "official_tests_passed": 52,
+    "files": 52,
+    "opencode_completed_code_but_failed_delivery": 2,
+    "scores_manually_changed": false
+  },
+  "summary": [
+    {
+      "arm": "codex",
+      "name": "Codex",
+      "kind": "single",
+      "correct": 14,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 1,
+          "total": 12,
+          "runtime_failures": 6
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 13,
+      "median_elapsed_s": 66.2,
+      "model_requests": 336,
+      "input_tokens_reported": 8972888,
+      "output_tokens_reported": 147233,
+      "usage_unknown_requests": 0
+    },
+    {
+      "arm": "deepseek",
+      "name": "DSH",
+      "kind": "single",
+      "correct": 8,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 0,
+          "total": 12,
+          "runtime_failures": 9
+        },
+        "bc": {
+          "correct": 0,
+          "total": 8,
+          "runtime_failures": 8
+        },
+        "search": {
+          "correct": 4,
+          "total": 8,
+          "runtime_failures": 3
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 20,
+      "median_elapsed_s": 50.68,
+      "model_requests": 321,
+      "input_tokens_reported": 6457654,
+      "output_tokens_reported": 229366,
+      "usage_unknown_requests": 0
+    },
+    {
+      "arm": "cc",
+      "name": "Claude Code",
+      "kind": "single",
+      "correct": 17,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 4,
+          "total": 12,
+          "runtime_failures": 5
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 12,
+      "median_elapsed_s": 85.5,
+      "model_requests": 341,
+      "input_tokens_reported": 6120296,
+      "output_tokens_reported": 186777,
+      "usage_unknown_requests": 0
+    },
+    {
+      "arm": "jcode",
+      "name": "JCode",
+      "kind": "single",
+      "correct": 16,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 3,
+          "total": 12,
+          "runtime_failures": 5
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 6
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 11,
+      "median_elapsed_s": 58.7,
+      "model_requests": 236,
+      "input_tokens_reported": 9140659,
+      "output_tokens_reported": 119433,
+      "usage_unknown_requests": 0
+    },
+    {
+      "arm": "penguin",
+      "name": "Penguin",
+      "kind": "single",
+      "correct": 17,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 4,
+          "total": 12,
+          "runtime_failures": 4
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 11,
+      "median_elapsed_s": 32.09,
+      "model_requests": 275,
+      "input_tokens_reported": 7095620,
+      "output_tokens_reported": 184222,
+      "usage_unknown_requests": 1
+    },
+    {
+      "arm": "opencode",
+      "name": "OpenCode",
+      "kind": "single",
+      "correct": 13,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 2,
+          "total": 12,
+          "runtime_failures": 7
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 2,
+          "total": 4,
+          "runtime_failures": 2
+        }
+      },
+      "runtime_failures": 16,
+      "median_elapsed_s": 30.82,
+      "model_requests": 268,
+      "input_tokens_reported": 7211128,
+      "output_tokens_reported": 91438,
+      "usage_unknown_requests": 2
+    },
+    {
+      "arm": "pi",
+      "name": "Pi",
+      "kind": "single",
+      "correct": 18,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 5,
+          "total": 12,
+          "runtime_failures": 2
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 4
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 6,
+      "median_elapsed_s": 44.15,
+      "model_requests": 235,
+      "input_tokens_reported": 7620529,
+      "output_tokens_reported": 130612,
+      "usage_unknown_requests": 3
+    },
+    {
+      "arm": "nanobot",
+      "name": "NanoBot",
+      "kind": "single",
+      "correct": 13,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 3,
+          "total": 12,
+          "runtime_failures": 4
+        },
+        "bc": {
+          "correct": 0,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 6,
+          "total": 8,
+          "runtime_failures": 1
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 12,
+      "median_elapsed_s": 165.68,
+      "model_requests": 472,
+      "input_tokens_reported": 8842917,
+      "output_tokens_reported": 142989,
+      "usage_unknown_requests": 1
+    },
+    {
+      "arm": "hermes",
+      "name": "Hermes",
+      "kind": "single",
+      "correct": 15,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 3,
+          "total": 12,
+          "runtime_failures": 6
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 5
+        },
+        "search": {
+          "correct": 7,
+          "total": 8,
+          "runtime_failures": 1
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 12,
+      "median_elapsed_s": 69.39,
+      "model_requests": 283,
+      "input_tokens_reported": 10378141,
+      "output_tokens_reported": 145098,
+      "usage_unknown_requests": 32
+    },
+    {
+      "arm": "pk",
+      "name": "军团 · PK",
+      "kind": "team",
+      "correct": 13,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 1,
+          "total": 12,
+          "runtime_failures": 7
+        },
+        "bc": {
+          "correct": 0,
+          "total": 8,
+          "runtime_failures": 8
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 15,
+      "median_elapsed_s": 223.73,
+      "model_requests": 736,
+      "input_tokens_reported": 16879906,
+      "output_tokens_reported": 357401,
+      "usage_unknown_requests": 32
+    },
+    {
+      "arm": "relay",
+      "name": "军团 · 接力",
+      "kind": "team",
+      "correct": 16,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 4,
+          "total": 12,
+          "runtime_failures": 6
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 7,
+          "total": 8,
+          "runtime_failures": 1
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 14,
+      "median_elapsed_s": 137.61,
+      "model_requests": 541,
+      "input_tokens_reported": 14893379,
+      "output_tokens_reported": 226153,
+      "usage_unknown_requests": 19
+    },
+    {
+      "arm": "orchestrate",
+      "name": "军团 · 首脑编排",
+      "kind": "team",
+      "correct": 14,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 1,
+          "total": 12,
+          "runtime_failures": 5
+        },
+        "bc": {
+          "correct": 1,
+          "total": 8,
+          "runtime_failures": 7
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 12,
+      "median_elapsed_s": 50.55,
+      "model_requests": 300,
+      "input_tokens_reported": 5744038,
+      "output_tokens_reported": 202992,
+      "usage_unknown_requests": 1
+    },
+    {
+      "arm": "auto",
+      "name": "军团 · 自动",
+      "kind": "team",
+      "correct": 14,
+      "total": 32,
+      "by_suite": {
+        "gaia": {
+          "correct": 2,
+          "total": 12,
+          "runtime_failures": 8
+        },
+        "bc": {
+          "correct": 0,
+          "total": 8,
+          "runtime_failures": 8
+        },
+        "search": {
+          "correct": 8,
+          "total": 8,
+          "runtime_failures": 0
+        },
+        "coding": {
+          "correct": 4,
+          "total": 4,
+          "runtime_failures": 0
+        }
+      },
+      "runtime_failures": 16,
+      "median_elapsed_s": 54.29,
+      "model_requests": 250,
+      "input_tokens_reported": 5278874,
+      "output_tokens_reported": 177344,
+      "usage_unknown_requests": 11
+    }
+  ],
+  "source_summary_sha256": "d98a4151863b5ad6f2e1ad6b6a01547041edc3f48fc98963726a90f386387c7e",
+  "references": [
+    {
+      "label": "GAIA · 原论文与评测定义",
+      "url": "https://arxiv.org/abs/2311.12983"
+    },
+    {
+      "label": "BrowseComp · 官方数据与评分实现",
+      "url": "https://github.com/openai/simple-evals"
+    },
+    {
+      "label": "SimpleQA · 官方说明",
+      "url": "https://openai.com/index/introducing-simpleqa/"
+    },
+    {
+      "label": "HumanEval · 官方代码与测试",
+      "url": "https://github.com/openai/human-eval"
+    },
+    {
+      "label": "DeepSeek · 模型别名与版本说明",
+      "url": "https://api-docs.deepseek.com/updates"
+    }
+  ]
+}

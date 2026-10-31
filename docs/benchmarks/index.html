@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="军团公开实验室：9家Harness与4种协作模式，同题、同模型、相同限额。公开成功、错误、失败与尚未证明的事。">
+<title>军团公开实验室 · 同题实测，不靠口号</title><link rel="stylesheet" href="styles.css"></head>
+<body><a class="skip" href="#results">跳到对比成绩</a><div class="wrap">
+<header class="top"><a class="brand" href="https://vortexsean.com/">LEGION / 军团</a>
+<nav aria-label="页面导航"><a href="#results">对比成绩</a><a href="#method">怎么测的</a><a href="/">试玩作品</a></nav></header>
+<main>
+<p class="eyebrow">公开实验室 · V2 · 2026.10.31 <span class="badge">不是官方榜单</span></p>
+<h1>一起做，真的比单兵更强吗？</h1>
+<p class="lede">把同一组题交给 9 家 Harness，再交给 4 种军团模式。<br>成功、答错、半路失败，都放在这里。</p>
+<div class="actions"><a class="button primary" href="#results">看真实成绩 ↓</a><a class="button" href="results-v2.csv" download>下载对比表 CSV</a><a class="button" href="report-v2.md" download>下载完整说明</a></div>
+<section class="verdict" aria-labelledby="verdict-title"><h2 id="verdict-title">本轮，团队还没有超过最好的单家。</h2>
+<p>同样 32 道题，Pi 成功交付并判对 <strong>18 道</strong>；团队里最多的是接力，<strong>16 道</strong>。
+接力用了约 <strong>2.3 倍</strong>模型请求，却没多交对结果。我们要改的不是宣传词，而是协作与交付本身。</p></section>
+<div class="numbers" aria-label="本次416次对照运行的分类"><div class="stat"><strong>188</strong><span>成功交付，评分通过</span></div>
+<div class="stat"><strong>58</strong><span>正常交卷，但评分未通过</span></div><div class="stat"><strong>170</strong><span>运行或交付没有完成</span></div></div>
+<section class="section" id="results"><div class="section-title"><h2>同一张考卷，分开看表现</h2><span class="badge">32 道题 × 13 个对象 = 416 次运行</span></div>
+<p class="hint">每格是「交付且判对 / 本类题数」。失败也算进分母，不挑最好的一次。行序固定，不包装成世界排名。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="13个对象对比成绩，可横向滚动"><table>
+<thead><tr><th scope="col">对象</th><th scope="col">GAIA · 综合</th><th scope="col">BC · 深搜</th><th scope="col">SimpleQA · 检索</th><th scope="col">HumanEval · 函数</th><th scope="col">交付且判对</th><th scope="col">运行失败</th><th scope="col">时间中位数</th></tr></thead>
+<tbody><tr class="group"><th colspan="8">独立成员 · 9 家</th></tr>
+<tr><th scope="row">Codex</th><td>1 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>14 / 32</strong><span class="bar" aria-hidden="true"><i style="width:43.75%"></i></span></span></td><td class="fail">13 / 32</td><td>66.2 秒</td></tr>
+<tr><th scope="row">DSH</th><td>0 / 12</td><td>0 / 8</td><td>4 / 8</td><td>4 / 4</td><td><span class="metric"><strong>8 / 32</strong><span class="bar" aria-hidden="true"><i style="width:25.0%"></i></span></span></td><td class="fail">20 / 32</td><td>50.7 秒</td></tr>
+<tr><th scope="row">Claude Code</th><td>4 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>17 / 32</strong><span class="bar" aria-hidden="true"><i style="width:53.125%"></i></span></span></td><td class="fail">12 / 32</td><td>85.5 秒</td></tr>
+<tr><th scope="row">JCode</th><td>3 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>16 / 32</strong><span class="bar" aria-hidden="true"><i style="width:50.0%"></i></span></span></td><td class="fail">11 / 32</td><td>58.7 秒</td></tr>
+<tr><th scope="row">Penguin</th><td>4 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>17 / 32</strong><span class="bar" aria-hidden="true"><i style="width:53.125%"></i></span></span></td><td class="fail">11 / 32</td><td>32.1 秒</td></tr>
+<tr><th scope="row">OpenCode</th><td>2 / 12</td><td>1 / 8</td><td>8 / 8</td><td>2 / 4</td><td><span class="metric"><strong>13 / 32</strong><span class="bar" aria-hidden="true"><i style="width:40.625%"></i></span></span></td><td class="fail">16 / 32</td><td>30.8 秒</td></tr>
+<tr><th scope="row">Pi</th><td>5 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>18 / 32</strong><span class="bar" aria-hidden="true"><i style="width:56.25%"></i></span></span></td><td class="fail">6 / 32</td><td>44.1 秒</td></tr>
+<tr><th scope="row">NanoBot</th><td>3 / 12</td><td>0 / 8</td><td>6 / 8</td><td>4 / 4</td><td><span class="metric"><strong>13 / 32</strong><span class="bar" aria-hidden="true"><i style="width:40.625%"></i></span></span></td><td class="fail">12 / 32</td><td>165.7 秒</td></tr>
+<tr><th scope="row">Hermes</th><td>3 / 12</td><td>1 / 8</td><td>7 / 8</td><td>4 / 4</td><td><span class="metric"><strong>15 / 32</strong><span class="bar" aria-hidden="true"><i style="width:46.875%"></i></span></span></td><td class="fail">12 / 32</td><td>69.4 秒</td></tr>
+<tr class="group"><th colspan="8">军团协作 · 4 种模式</th></tr>
+<tr><th scope="row">军团 · PK</th><td>1 / 12</td><td>0 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>13 / 32</strong><span class="bar" aria-hidden="true"><i style="width:40.625%"></i></span></span></td><td class="fail">15 / 32</td><td>223.7 秒</td></tr>
+<tr><th scope="row">军团 · 接力</th><td>4 / 12</td><td>1 / 8</td><td>7 / 8</td><td>4 / 4</td><td><span class="metric"><strong>16 / 32</strong><span class="bar" aria-hidden="true"><i style="width:50.0%"></i></span></span></td><td class="fail">14 / 32</td><td>137.6 秒</td></tr>
+<tr><th scope="row">军团 · 首脑编排</th><td>1 / 12</td><td>1 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>14 / 32</strong><span class="bar" aria-hidden="true"><i style="width:43.75%"></i></span></span></td><td class="fail">12 / 32</td><td>50.5 秒</td></tr>
+<tr><th scope="row">军团 · 自动</th><td>2 / 12</td><td>0 / 8</td><td>8 / 8</td><td>4 / 4</td><td><span class="metric"><strong>14 / 32</strong><span class="bar" aria-hidden="true"><i style="width:43.75%"></i></span></span></td><td class="fail">16 / 32</td><td>54.3 秒</td></tr></tbody></table></div>
+<p class="hint">手机可左右滑动表格。时间含启动、失败及并发竞争。<strong>HumanEval 只有 4 道函数题，不代表高难工程能力。</strong></p></section>
+<section class="section"><h2>不是每一次失败，都是模型不会。</h2><div class="grid">
+<article class="panel"><span class="badge">已复现 · 完成结果传递问题</span><h3 style="margin-top:13px">代码写对了，却被误当成失败。</h3>
+<p>OpenCode 有两份代码通过了官方隐藏测试，但它说“空列表也测过”，系统看到英文 <code>empty</code> 就误认成服务故障。</p>
+<div class="steps" aria-label="误判经过"><span>文件已写好</span><span>→ 测试通过</span><span>→ 完成说明被误判</span></div>
+<p class="small">52 份代码文件全部通过对应测试。主表仍保留真实交付状态，没有手工把 OpenCode 的 2/4 改成 4/4。这两例不代表所有失败都同因。</p></article>
+<article class="panel"><span class="badge">已观测 · 实验额度</span><h3 style="margin-top:13px">很多任务先耗尽了时间和调用。</h3>
+<p>170 次运行/交付失败中，<strong>88 次</strong>触及时间限额，<strong>48 次</strong>触及调用或 token 停止线，其余 <strong>34 次</strong>需继续逐条核查。</p>
+<p class="small">这是相同资源限额下的结果，不是对“无限时间能否做对”的判断。没有正常交卷时，不把尚未评分的内容武断地说成答错。</p></article>
+</div></section>
+<section class="section" id="method"><h2>把条件写清楚，比较才有意义。</h2>
+<details open><summary>考卷、模型与执行方式</summary><ul>
+<li>GAIA 12、BrowseComp 8、SimpleQA 8、HumanEval 4；固定随机种子 20261030，全员使用同一份冻结题单。GAIA仅无附件题，BC来自历史40题集合，SimpleQA允许搜索。</li>
+<li>固定 DeepSeek V4.1 Flash 别名通路：出站请求 <code>deepseek-v4-flash</code>，回执 <code>deepseek-flash / deepseek-v4-flash</code>。这是请求与服务回执核验，不是远端权重认证。</li>
+<li>单家走军团原生接入；四模式走真实 HTTP 入口和隔离身份。保留各家原生工具和提示词，不手写一套替代答题流程，也不是上游各家最佳配置排行榜。</li>
+<li>单家并发 9，模式并发 3，上游模型连接合计最多 9。每单 240 秒、48 次模型请求、总输出 32768、单次输出 4096 token。输入累计524288后拒绝新请求，在途仍可能越线；共享检索入口最多24次。</li>
+</ul></details>
+<details><summary>判分与公平性限制</summary><ul>
+<li>GAIA用确定性官方评分逻辑；代码真实运行隐藏测试；BC/SimpleQA用官方模板和本次指定模型判分，不是两个不同模型的独立盲评。</li>
+<li>416次均已判分，未评分0。不能由32题推断普遍能力，也没有证明训练数据未包含这些公开题。</li>
+<li>原生辅助阶段有88次提出其他模型请求，被实验代理显式统一为DeepSeek并记账；这不证明产品已原生全流程锁模。</li>
+<li>早期V1因实验文件隔离配置错误已整批作废。修正后所有对象按V2重跑，不只重跑失败题，不择优拼表。</li>
+<li>本页仅发布汇总与方法；不公开原题、答案、原始会话、私有源码、内部地址或凭据。</li>
+</ul></details>
+<details><summary>实际用量，不把 token 当付款金额</summary>
+<p>有效V2作者运行共4594次模型请求；已报告输入114,636,029 token、输出2,341,058 token，102次请求缺完整用量。输入包括重复历史和缓存，不等于新增信息或实际支付。</p>
+<p>此数不含作废批次、全部早期预检、工具服务和裁判的额外消耗。数据下载保留每个对象的用量与未知数，不用缺失值冒充零成本。</p></details>
+<div class="actions"><a class="button" href="results-v2.json" download>下载公开数据 JSON</a><a class="button" href="report-v2.md" download>下载方法与结论</a></div></section>
+<section class="section"><h2>军团要成为怎样的战队？</h2><p class="lede">不是把很多名字放进一个下拉框。是让不同 Harness 保留自己的长处、共享工具与现场，能补位，也能从彼此的工作里变强。</p>
+<div class="grid"><article class="panel"><h3>方向：按任务组强队</h3><p>先看到全部可用成员、工具和真实能力，再选适合本题的组合。简单题不强拉全员，复杂任务不漏掉能帮忙的成员。</p><p class="small">“找到最好的”是目标，不是未经证明的能力保证。默认选队的实际变更和验收会另外说明。</p></article>
+<article class="panel"><h3>下一轮：更难，也更多类型</h3><p>继续查找至少10类高难基准，覆盖不同能力，再用同条件比较。数据版本、样本量、附件和运行限制一起公开。</p><p class="small">这一轮的新成绩尚未发布；本页没有用待跑的题集充当已完成结果。</p></article></div></section>
+<section class="section"><h2>评测来自哪里</h2><div class="sources"><a href="https://arxiv.org/abs/2311.12983" rel="noreferrer">GAIA · 原论文与评测定义 ↗</a><a href="https://github.com/openai/simple-evals" rel="noreferrer">BrowseComp · 官方数据与评分实现 ↗</a><a href="https://openai.com/index/introducing-simpleqa/" rel="noreferrer">SimpleQA · 官方说明 ↗</a><a href="https://github.com/openai/human-eval" rel="noreferrer">HumanEval · 官方代码与测试 ↗</a><a href="https://api-docs.deepseek.com/updates" rel="noreferrer">DeepSeek · 模型别名与版本说明 ↗</a></div>
+<p class="hint">这些是数据和方法的一手来源，不表示作者认可或背书本实验。</p></section>
+</main><footer class="footer">LEGION · 同题实测，不靠口号。<br>原始汇总指纹 <code>d98a4151863b5ad6f2e1ad6b6a01547041edc3f48fc98963726a90f386387c7e</code><br>
+<a href="https://github.com/seanliii/dsh-plugin-legion">DSH 插件与开源介绍 ↗</a> · <a href="/">回到作品集</a></footer></div></body></html>
