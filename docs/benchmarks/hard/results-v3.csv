@@ -1,0 +1,14 @@
+﻿对象,BFCL V4 — parallel_multiple/2,BrowseComp — official full-pool fresh subset/2,CharXiv — human-authored numeric reasoning/2,IFBench — test multi-constraint subset/2,LiveCodeBench — release_v6 new-problem hard subset/2,LongBench v2 — hard / long/2,OlympiadBench — OE_TO_maths_en_COMP/2,SciCode — test main problems/2,Spider 2.0-DBT — complete DuckDB transformation projects [v3b availability-filtered]/2,ZebraLogicBench — maximum 6×6 grid (official Hard / XL)/2,运行未失败且通过评分,运行失败,部分返回数,题数,时间中位数秒,模型请求数,输入token已报告,输出token已报告,用量未知请求
+Codex,1,1,2,2,2,2,1,0,0,0,11,7,0,20,64.56,261,7957559,204770,0
+DSH,1,0,0,1,1,2,1,0,0,0,6,11,0,20,56.59,145,3537496,181769,0
+Claude Code,2,1,2,2,1,2,1,0,2,0,13,4,0,20,99.67,281,6556738,241859,0
+JCode,1,0,2,2,2,2,1,0,0,0,10,6,0,20,122.26,275,10646513,284722,1
+Penguin,2,0,2,2,2,2,1,0,1,0,12,6,0,20,80.16,289,8678836,289158,1
+OpenCode,2,0,2,1,2,2,1,0,0,0,10,7,0,20,56.43,246,7259864,206466,2
+Pi,2,0,2,2,2,2,1,0,0,0,11,1,0,20,81.69,257,8022550,238744,1
+NanoBot,2,0,2,2,1,1,2,0,0,0,10,3,0,20,144.02,381,10032354,264228,1
+Hermes,2,0,2,2,2,2,2,0,0,0,12,6,0,20,79.96,273,9338082,291115,20
+军团 · PK,2,0,1,2,2,1,2,0,0,0,10,7,9,20,230.26,690,17993887,599187,20
+军团 · 接力,1,0,2,1,2,2,1,0,0,0,9,6,8,20,207.11,502,16673627,413670,14
+军团 · 首脑编排,2,0,2,2,2,2,2,0,0,0,12,6,0,20,101.34,291,6050078,321006,1
+军团 · 自动,2,0,0,1,2,1,2,0,0,0,8,11,0,20,100.3,303,9505579,382948,4
