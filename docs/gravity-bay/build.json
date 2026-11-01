@@ -1,9 +1,9 @@
 {
   "name": "gravity-bay",
-  "version": "0.2.0",
-  "sourceCommit": "d1f0485ab712c9327deb4936a35e5207eca38cde",
+  "version": "0.2.1",
+  "sourceCommit": "f043f83a77e461761416adea43fe189563a1e928",
   "sourceDirty": false,
   "sourceScope": "runtime-and-build-inputs",
-  "builtAt": "2026-11-01T03:15:18.875Z",
+  "builtAt": "2026-11-01T03:45:20.179Z",
   "capability": "single-player-guided-mechanics-course-with-retained-playground"
 }
