@@ -1,0 +1,26 @@
+{
+  "schema": "math-world-public/v1",
+  "product": "数学世界课件原型",
+  "runtime_version": "r23-7aa49456",
+  "source_snapshot": "79032849f2fd1f41ccb635c8c49d81f880e6a569",
+  "route": "/math-world/",
+  "core_units": 55,
+  "model_prototypes": 72,
+  "theme_design_candidates": 120,
+  "legacy_atlas_images": 144,
+  "product_logic_changed": false,
+  "known_experience_gaps_fixed": false,
+  "new_diagnostic_product_included": false,
+  "videos": {
+    "exploration-demo.mp4": "2026-11-01已录版本",
+    "math-course-20261102.mp4": "2026-11-02已录版本，早于地区层最终接入"
+  },
+  "not_published": [
+    "源码ZIP",
+    "私人参考收藏",
+    "审查原件",
+    "研究快照",
+    "真实个人学习记录",
+    "新题目诊断研究"
+  ]
+}

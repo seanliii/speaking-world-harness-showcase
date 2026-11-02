@@ -1,0 +1,31 @@
+{
+  "meaning": "跨学段先备建议来自本轮内容分析，不是所有孩子必须经过的锁课规则，也不是课标逐年级顺序。",
+  "edges": [
+    {"unit":"J01","prerequisites":["P07","P08"],"reason":"从小数分数的量和运算转向有理数、实数，先分清大小、单位和运算。"},
+    {"unit":"J02","prerequisites":["P04","P12"],"reason":"运算律和字母表示数量支持整式恒等变形。"},
+    {"unit":"J03","prerequisites":["P08"],"reason":"分数单位、通分和约分支持分式，并另补定义域。"},
+    {"unit":"J04","prerequisites":["P12"],"reason":"先有等量和数量关系，再学习方程与联立约束。"},
+    {"unit":"J10","prerequisites":["P13","P15"],"reason":"角、方向和变换为几何论证提供对象。"},
+    {"unit":"J11","prerequisites":["P13","P14"],"reason":"三角形与面积为全等、勾股和证明提供具体表示。"},
+    {"unit":"J14","prerequisites":["P09"],"reason":"比值与测量单位支持锐角三角函数。"},
+    {"unit":"J16","prerequisites":["P17"],"reason":"从数据、平均数和图表进入更丰富的统计量。"},
+    {"unit":"J18","prerequisites":["P15","P16"],"reason":"先有位置、立体和展开经验，再解释视图遮挡与唯一性。"},
+    {"unit":"S01","prerequisites":["J10"],"reason":"从有依据的推理认识条件、量词与集合论域。"},
+    {"unit":"S02","prerequisites":["J05","J06"],"reason":"一次不等式、二次方程与根区间支持更一般的约束。"},
+    {"unit":"S03","prerequisites":["J07","J09"],"reason":"函数输入输出、图像与二次变化支持高中函数统一语言。"},
+    {"unit":"S04","prerequisites":["J01","J06"],"reason":"实数运算、方程条件支持幂指数与对数。"},
+    {"unit":"S05","prerequisites":["J14","J15"],"reason":"由锐角比和圆走向任意角、弧度与周期。"},
+    {"unit":"S06","prerequisites":["J11","J14"],"reason":"先理解三角形条件与测量，再使用正余弦定理。"},
+    {"unit":"S07","prerequisites":["J07","J13"],"reason":"坐标、平移与相似支持位移和向量的不同表示。"},
+    {"unit":"S08","prerequisites":["J01","J07"],"reason":"实数边界与坐标表示帮助理解复数而非机械引入i。"},
+    {"unit":"S09","prerequisites":["J11","J18"],"reason":"平面证明和空间视图支持点线面关系。"},
+    {"unit":"S10","prerequisites":["J07","J18"],"reason":"坐标与空间位置共同支撑三维向量。"},
+    {"unit":"S11","prerequisites":["J09","J15"],"reason":"函数交点与圆的关系转译为解析几何。"},
+    {"unit":"S12","prerequisites":["J09","J15"],"reason":"二次关系、距离与圆为轨迹与圆锥曲线作准备。"},
+    {"unit":"S13","prerequisites":["P04","J07"],"reason":"运算律和函数对应支持数列的项、下标与有限和。"},
+    {"unit":"S14","prerequisites":["J09"],"reason":"先理解变化、图像与有约束最值，再认识局部变化率。"},
+    {"unit":"S15","prerequisites":["P05","J17"],"reason":"共同安排与不重不漏的样本空间支持计数。"},
+    {"unit":"S16","prerequisites":["J17"],"reason":"先理解随机试验与等可能条件，再研究条件信息和分布。"},
+    {"unit":"S17","prerequisites":["J16"],"reason":"描述统计、离散程度和抽样限制支持回归与推断。"}
+  ]
+}

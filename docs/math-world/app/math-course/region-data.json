@@ -1,0 +1,1551 @@
+{
+  "schemaVersion": 1,
+  "id": "math-national-regions-20261102",
+  "asOf": "2026-11-02",
+  "scopeNote": "全国各地区数学知识并集是目标；现有55核心单元/340目录项为已编入内容。省份可选不代表当地教材、逐点考法或前1%效果已验；原始知识ID不按地区复制。",
+  "regionIdConvention": "本产品地区键，不冒充官方行政区划代码或考试报名考区编码。",
+  "defaultSelection": {
+    "regionId": "CN",
+    "examType": "all",
+    "year": 2026
+  },
+  "regions": [
+    {
+      "id": "CN",
+      "label": "全国知识并集（默认）",
+      "system": "mainland",
+      "kind": "national"
+    },
+    {
+      "id": "CN-BJ",
+      "label": "北京市",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-TJ",
+      "label": "天津市",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HE",
+      "label": "河北省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-SX",
+      "label": "山西省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-NM",
+      "label": "内蒙古自治区",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-LN",
+      "label": "辽宁省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-JL",
+      "label": "吉林省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HL",
+      "label": "黑龙江省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-SH",
+      "label": "上海市",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-JS",
+      "label": "江苏省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-ZJ",
+      "label": "浙江省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-AH",
+      "label": "安徽省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-FJ",
+      "label": "福建省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-JX",
+      "label": "江西省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-SD",
+      "label": "山东省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HA",
+      "label": "河南省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HB",
+      "label": "湖北省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HN",
+      "label": "湖南省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-GD",
+      "label": "广东省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "partial_official_facts_not_point_complete",
+      "note": "广东不能只用一个省名套全部中考。可分别查看省统一命题范围、广州、深圳；其余地市的归属仍待核。"
+    },
+    {
+      "id": "CN-GX",
+      "label": "广西壮族自治区",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-HI",
+      "label": "海南省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-CQ",
+      "label": "重庆市",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-SC",
+      "label": "四川省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-GZ",
+      "label": "贵州省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-YN",
+      "label": "云南省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-XZ",
+      "label": "西藏自治区",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-SN",
+      "label": "陕西省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-GS",
+      "label": "甘肃省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-QH",
+      "label": "青海省",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-NX",
+      "label": "宁夏回族自治区",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-XJ",
+      "label": "新疆维吾尔自治区",
+      "system": "mainland",
+      "kind": "province_level",
+      "parentId": "CN",
+      "mappingStatus": "pending_claims"
+    },
+    {
+      "id": "CN-GD-PROV",
+      "label": "广东 · 省统一命题范围",
+      "system": "mainland",
+      "kind": "exam_implementation",
+      "parentId": "CN-GD",
+      "note": "仅指采用省统一命题的地市；已核省通知，不代表所有广东城市，地市成员全集仍待核。",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-GD-GZ",
+      "label": "广东 · 广州市",
+      "system": "mainland",
+      "kind": "city",
+      "parentId": "CN-GD",
+      "note": "广州作为单独考区核资料，不直接继承仅用于省级中考卷的描述。",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-GD-SZ",
+      "label": "广东 · 深圳市",
+      "system": "mainland",
+      "kind": "city",
+      "parentId": "CN-GD",
+      "note": "深圳作为单独考区核资料，不直接继承仅用于省级中考卷的描述。",
+      "mappingStatus": "partial_official_facts_not_point_complete"
+    },
+    {
+      "id": "CN-XJ-BT",
+      "label": "新疆生产建设兵团（教育管理范围）",
+      "system": "mainland",
+      "kind": "education_authority",
+      "parentId": "CN-XJ",
+      "note": "这是教育管理范围，不计作新增省份；具体考试与教材安排待核。"
+    },
+    {
+      "id": "CN-HK",
+      "label": "香港 · 单独课程体系待接",
+      "system": "separate",
+      "kind": "separate_curriculum",
+      "parentId": "CN"
+    },
+    {
+      "id": "CN-MO",
+      "label": "澳门 · 单独课程体系待接",
+      "system": "separate",
+      "kind": "separate_curriculum",
+      "parentId": "CN"
+    },
+    {
+      "id": "CN-TW",
+      "label": "台湾 · 单独课程体系待接",
+      "system": "separate",
+      "kind": "separate_curriculum",
+      "parentId": "CN"
+    }
+  ],
+  "exams": [
+    {
+      "id": "all",
+      "label": "全部数学 · 全国并集",
+      "stages": [
+        "primary",
+        "junior",
+        "senior"
+      ],
+      "note": "从小学计算与空间关系，一路接到初中代数几何、高中函数与综合论证。现有目录不等于所有地区细目已收齐。"
+    },
+    {
+      "id": "transition",
+      "label": "小升初 · 小学达标与衔接",
+      "stages": [
+        "primary"
+      ],
+      "note": "检查小学概念、计算、几何和数据的基础，按需要接入初中先备；不虚构全国统一小升初选拔试卷。"
+    },
+    {
+      "id": "zhongkao",
+      "label": "中考 · 初中数学",
+      "stages": [
+        "junior"
+      ],
+      "note": "地区可能细到城市；教学先备与当地当年考查要求分别核对，缺资料不等于不考。"
+    },
+    {
+      "id": "gaokao",
+      "label": "高考 · 高中数学",
+      "stages": [
+        "senior"
+      ],
+      "note": "知识主干、当年卷种与适用考区分开；不会凭旧年份印象套全国I/II卷，前1%仍需独立测验和常模。"
+    }
+  ],
+  "anchorLinks": [
+    {
+      "unitId": "P01",
+      "nodeIds": [
+        "math-p-number"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P02",
+      "nodeIds": [
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P03",
+      "nodeIds": [
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P04",
+      "nodeIds": [
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P05",
+      "nodeIds": [
+        "math-p-number",
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P06",
+      "nodeIds": [
+        "math-p-fraction"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P07",
+      "nodeIds": [
+        "math-p-decimal"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P08",
+      "nodeIds": [
+        "math-p-fraction",
+        "math-p-decimal",
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P09",
+      "nodeIds": [
+        "math-p-ratio"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P10",
+      "nodeIds": [
+        "math-p-ratio"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P11",
+      "nodeIds": [
+        "math-p-measure"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P12",
+      "nodeIds": [
+        "math-p-operation"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P13",
+      "nodeIds": [
+        "math-p-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P14",
+      "nodeIds": [
+        "math-p-measure",
+        "math-p-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P15",
+      "nodeIds": [
+        "math-p-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P16",
+      "nodeIds": [
+        "math-p-geometry",
+        "math-p-measure"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P17",
+      "nodeIds": [
+        "math-p-data"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "P18",
+      "nodeIds": [
+        "math-p-operation",
+        "math-p-measure",
+        "math-p-data"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J01",
+      "nodeIds": [
+        "math-j-number"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J02",
+      "nodeIds": [
+        "math-j-algebra"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J03",
+      "nodeIds": [
+        "math-j-algebra"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J04",
+      "nodeIds": [
+        "math-j-algebra"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J05",
+      "nodeIds": [
+        "math-j-algebra"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J06",
+      "nodeIds": [
+        "math-j-algebra"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J07",
+      "nodeIds": [
+        "math-j-function"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J08",
+      "nodeIds": [
+        "math-j-function"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J09",
+      "nodeIds": [
+        "math-j-function"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J10",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J11",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J12",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J13",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J14",
+      "nodeIds": [
+        "math-j-geometry",
+        "math-j-model"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J15",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J16",
+      "nodeIds": [
+        "math-j-statistics"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J17",
+      "nodeIds": [
+        "math-j-statistics"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J18",
+      "nodeIds": [
+        "math-j-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "J19",
+      "nodeIds": [
+        "math-j-model"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S01",
+      "nodeIds": [
+        "math-s-set"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S02",
+      "nodeIds": [
+        "math-s-function",
+        "math-s-set"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S03",
+      "nodeIds": [
+        "math-s-function"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S04",
+      "nodeIds": [
+        "math-s-function"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S05",
+      "nodeIds": [
+        "math-s-trigonometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S06",
+      "nodeIds": [
+        "math-s-trigonometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S07",
+      "nodeIds": [
+        "math-s-trigonometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S08",
+      "nodeIds": [],
+      "alignment": "author_topic_link",
+      "note": "旧数学22个粗节点中没有准确复数节点，单元保留独立ID；不错误归入集合逻辑。"
+    },
+    {
+      "unitId": "S09",
+      "nodeIds": [
+        "math-s-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S10",
+      "nodeIds": [
+        "math-s-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S11",
+      "nodeIds": [
+        "math-s-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S12",
+      "nodeIds": [
+        "math-s-geometry"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S13",
+      "nodeIds": [
+        "math-s-sequence"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S14",
+      "nodeIds": [
+        "math-s-calculus"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S15",
+      "nodeIds": [
+        "math-s-probability"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S16",
+      "nodeIds": [
+        "math-s-probability"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S17",
+      "nodeIds": [
+        "math-s-probability"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    },
+    {
+      "unitId": "S18",
+      "nodeIds": [
+        "math-s-model"
+      ],
+      "alignment": "author_topic_link",
+      "note": "连接旧全科导航骨干，不表示该节点所有知识已教完。"
+    }
+  ],
+  "sources": [
+    {
+      "id": "MOE_ADMISSION_2026",
+      "title": "关于开展中小学阳光招生专项行动（2026年）的通知",
+      "publisher": "教育部办公厅",
+      "publishedDate": "2026-04-03",
+      "documentDate": "2026-04-01",
+      "url": "http://www.moe.gov.cn/srcsite/A06/s3321/202604/t20260403_1432844.html",
+      "retrievedAt": "2026-11-02T06:41:45.193Z",
+      "sha256": "658b9d49772591797acc21fd713e7492c4cff897ecb4c12b6c69ea6ad416e7d0",
+      "sourceType": "official_policy",
+      "readScope": "实际读取通知正文；重点二（二）免试就近入学、二（三）特定类型招生及小升初不得文化科目测试；不作为数学考点表。",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "CN22_MATH",
+      "url": "https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220510531636118932.pdf",
+      "version": "义务教育数学课程标准（2022年版）；不称现行最新，日常修订差异由父任务另核",
+      "readScope": "已有PDF23—24页OCR用于确认四领域和学段；本次对本地官方PDF25—60页（印刷18—53页）做只读OCR并阅读输出的内容要求、学业要求和相关教学节选，未声称人工校对全部页面。目视复核PDF31/印刷24的比与字母条款、PDF40/印刷33的几何条款。OCR公式不直接充当教材公式。PDF原件40,123,943字节、189页，SHA-256与sources.json的CN22_MATH一致。",
+      "title": "义务教育数学课程标准（2022年版）；不称现行最新，日常修订差异由父任务另核",
+      "publisher": "教育部",
+      "sourceType": "official_curriculum"
+    },
+    {
+      "id": "CN20_MATH",
+      "url": "https://www.ictr.edu.cn/Uploads/File/2025/02/07/3.%E6%99%AE%E9%80%9A%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E8%AF%BE%E7%A8%8B%E6%A0%87%E5%87%86%EF%BC%882017%E5%B9%B4%E7%89%882020%E5%B9%B4%E4%BF%AE%E8%AE%A2%EF%BC%89.20250207213419.pdf",
+      "version": "普通高中数学课程标准（2017年版2020年修订）；URL中的2025-02-07是托管路径日期，不是修订版次",
+      "readScope": "实际阅读本地官方全文同名txt的PDF物理页21–59（印刷13–51）：必修、选择性必修的内容要求、教学提示与学业要求，以及选修分类开头；读取封面。PDF62–63等矩阵页只作关键词定位，未冒称通读全部188页案例。正文定位沿sources.json的PDF页−8规则。",
+      "title": "普通高中数学课程标准（2017年版2020年修订）；URL中的2025-02-07是托管路径日期，不是修订版次",
+      "publisher": "教育部",
+      "sourceType": "official_curriculum"
+    },
+    {
+      "id": "CN25_MATH_INTERPRETATION",
+      "url": "https://www.ictr.edu.cn/periodicals/jing/detail/5454.html",
+      "version": "史宁中、王尚志、胡凤娟：2017年版2025年修订日常修订版解读；《基础教育课程》2025年第12期40–42页，公众号发布2025-12-04；不是课标全文",
+      "readScope": "实际读父任务提供的ictr-high-2025-full-interpretation.json完整文章正文（官方页跳转作者公众号）。吸收学业质量三水平与四个方面、单元结构化、教—学—评一体、建模探究和命题建议；不从解读反推逐条知识删改，不把软件练习层级当作学业质量达标。",
+      "title": "史宁中、王尚志、胡凤娟：2017年版2025年修订日常修订版解读；《基础教育课程》2025年第12期40–42页，公众号发布2025-12-04；不是课标全文",
+      "publisher": "教育部",
+      "sourceType": "official_curriculum"
+    },
+    {
+      "id": "zhejiang-2026-admissions",
+      "title": "浙江2026年高考招生工作通知发布",
+      "url": "https://www.zjzs.net/art/2026/5/20/art_30_12294.html",
+      "publisher": "浙江省教育考试院",
+      "publishedDate": "2026-05-20",
+      "retrievedAt": "2026-11-02T06:42:39.480Z",
+      "readScope": "已读正文，重点核“考试安排→考试科目和考试时间”的命题方、卷名、分值和次数。未引用图片时间表，未外推他省。",
+      "version": "2026年浙江省高考招生官方发布，保留原文卷名“全国新高考Ⅰ卷”。",
+      "sourceType": "official_exam_authority_release",
+      "sha256": "ef10a8ac81981b5c64cb497f9e03819ec50b3411c6a16f76e53fbbcbcad689a2",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "beijing-2026-admissions",
+      "title": "北京市2026年普通高等学校招生工作规定",
+      "url": "https://www.bjeea.cn/html/gkgz/tzgg/2026/0505/88114.html",
+      "publisher": "北京教育考试院",
+      "publishedDate": "2026-05-08",
+      "retrievedAt": "2026-11-02T06:42:40.033Z",
+      "readScope": "已读三、考试与评卷，核自主命题、统一高考含数学及（四）成绩。未将小语种全国卷例外平移到数学。",
+      "version": "2026年北京市普通高校招生工作规定。",
+      "sourceType": "official_exam_authority_regulation",
+      "sha256": "55089edb9b1a8387ff60367bb7e1a73fae71739aedcb13c5286343dcdea578ef",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "moe-2020-curriculum-notice",
+      "title": "教育部关于印发普通高中课程方案和语文等学科课程标准（2017年版2020年修订）的通知",
+      "url": "http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html",
+      "publisher": "中华人民共和国教育部",
+      "publishedDate": "2020-06-03",
+      "retrievedAt": "2026-11-02T06:44:51.268Z",
+      "readScope": "已读通知全文、元数据和ZIP链接，未下载ZIP、未在本轮重读课标全文。只核2020版本发布及通知所述修订范围，不据此认定2026考试具体版次。",
+      "version": "教材〔2020〕3号；2017年版2020年修订，不是2025修订版。",
+      "sourceType": "official_ministry_curriculum_notice",
+      "sha256": "5818eb01aa78daaf4405a27f5f6cce9ed1d73101d65fab60e60cac612db208a6",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "moe-2026-admissions-notice",
+      "title": "教育部关于做好2026年普通高校招生工作的通知",
+      "url": "http://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html",
+      "publisher": "中华人民共和国教育部",
+      "publishedDate": "2026-01-22",
+      "retrievedAt": "2026-11-02T06:45:43.868Z",
+      "readScope": "已读全文，重点核第三部分第6、7项及末尾对2025附件的明确引用。未见全国Ⅰ/Ⅱ卷省份表，也未指定数学“2017年版2025年修订”的完整版本名。",
+      "version": "教学〔2026〕1号；2026年招生工作通知。",
+      "sourceType": "official_ministry_annual_admissions_notice",
+      "sha256": "2af1ebb05b1d04a39eccf31f83275d7f82b61d80ae431aaf29a0ff916a287255",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "shanghai-2026-autumn-rules",
+      "title": "上海市教育委员会关于印发《2026年上海市普通高等学校秋季统一考试招生工作办法》的通知",
+      "url": "https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_04/20260421/b3b06847c5654c53a1167208210430a0.html",
+      "publisher": "上海市教育委员会",
+      "publishedDate": "2026-04-21",
+      "retrievedAt": "2026-11-02T06:47:11.549Z",
+      "readScope": "已读正文、索取号、发文日期和查阅全文DOCX链接。网页与附件同源，不算两份独立佐证。",
+      "version": "沪教委学〔2026〕17号；2026秋季统考招生工作办法公开入口。",
+      "sourceType": "official_municipal_education_notice",
+      "sha256": "78f6db117b657f6cb823a3db16436f12b050b2ee799a4f41bda01098bce08013",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "shanghai-2026-autumn-rules-attachment",
+      "title": "《2026年上海市普通高等学校秋季统一考试招生工作办法》正式DOCX（沪教委学〔2026〕17号）",
+      "url": "https://edu.sh.gov.cn/cmsres/ea/ea0605f3d43f4d17b5b0e5a3cb9454ec/dbc666e44b3b0d37f4c856e8c78a043e.docx",
+      "publisher": "上海市教育委员会",
+      "publishedDate": "2026-04-21",
+      "retrievedAt": "2026-11-02T06:47:11.899Z",
+      "readScope": "已下载原始DOCX并校验OOXML，提取262段全文，重点逐段读第37–50段。支持150分、不分文理、数学考试时间，未据此证明自主卷。未复核无关表格版式。",
+      "version": "沪教委学〔2026〕17号；签署2026-04-14，办公室印发2026-04-15。",
+      "sourceType": "official_municipal_regulation_original_attachment",
+      "sha256": "39926221dfade116a5ff9a6eba163587b3f9b561fbd70481e4fc3a5be2e7da58",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "bj-2026-enrolment-policy",
+      "title": "北京市教育委员会关于做好2026年高级中等学校考试招生工作的意见",
+      "url": "https://jw.beijing.gov.cn/xxgk/2024zcwj/2024xzgfwj/202603/t20260327_4567670.html",
+      "publisher": "北京市教育委员会",
+      "publishedDate": "2026-03-28",
+      "retrievedAt": "2026-11-02T06:44:11.973Z",
+      "readScope": {
+        "method": "Ego专用TaskSpace真实打开，读取正文",
+        "detailedSections": [
+          "元数据",
+          "三、考试工作",
+          "四、命题和评卷工作"
+        ],
+        "excluded": "未读取数学原卷、题型说明或数学单科时间表；本文不是逐点考试大纲。"
+      },
+      "version": "京教计〔2026〕5号；读取时网页标注“现行有效”",
+      "sourceType": "official_policy",
+      "sha256": "7c2d93f5f69faf814991f7a22544df4c49baccd0458e591b07ff8c225bf8c047",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "sh-2026-enrolment-opinions",
+      "title": "上海市教育委员会关于2026年上海市高中阶段学校招生工作的若干意见",
+      "url": "https://edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs_03/20260227/923fcd6838744ca59c213daa3fb180fd.html",
+      "publisher": "上海市教育委员会",
+      "publishedDate": "2026-02-27",
+      "retrievedAt": "2026-11-02T06:52:11.682Z",
+      "readScope": {
+        "method": "Ego专用TaskSpace真实打开，读取正文",
+        "detailedSections": [
+          "元数据",
+          "一、评价工作（一）学业评价"
+        ],
+        "excluded": "未读取页面链接的doc/docx附件；未将招生意见当作数学考后评析。"
+      },
+      "version": "沪教委基〔2026〕2号；索取号AA4307005-2026-001",
+      "sourceType": "official_policy",
+      "sha256": "341809a747494a8aab084b3c6a337363411ae3ff2641b8c6de4fa30f94cf5ffd",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "sh-2026-exam-announcement",
+      "title": "2026年上海市初中学业水平考试即将举行",
+      "url": "https://www.shmeea.edu.cn/page/03500/20260616/20351.html",
+      "publisher": "上海市教育考试院",
+      "publishedDate": "2026-06-16",
+      "retrievedAt": "2026-11-02T06:49:37.712Z",
+      "readScope": {
+        "method": "Ego专用TaskSpace真实打开，读取正文和HTML时间表",
+        "detailedSections": [
+          "首部考试科目和时间安排表",
+          "二、遵守考试规则：2.使用规定教材"
+        ],
+        "excluded": "未打开公告附件；未读取数学教材目录。五四学制证据不来自数学科目。"
+      },
+      "version": "网页发布时间2026-06-16 13:55:47；2026当年考前公告",
+      "sourceType": "official_exam_announcement",
+      "sha256": "ecf3057df673a5fb8b78568ebe1661e967b59c49a4b9f436b8300c0660ce544d",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "gd-2026-exam-schedule",
+      "title": "广东省教育厅关于2026年初中学业水平考试时间安排的通知",
+      "url": "https://edu.dg.gov.cn/attachment/0/386/386942/4491426.pdf",
+      "publisher": "广东省教育厅",
+      "publishedDate": "2026-01-21",
+      "retrievedAt": "2026-11-02T06:47:56.734Z",
+      "readScope": {
+        "method": "Ego打开官方承载页并下载原件；pdftotext读取；Poppler渲染2页并逐张实际查看",
+        "detailedSections": [
+          "承载页发布/翻印说明",
+          "PDF第1页通知首段与考试时间表",
+          "PDF第2页第一段及落款"
+        ],
+        "pdfPagesActuallyRead": [
+          1,
+          2
+        ],
+        "excluded": "没有题库、数学原卷、分值表、具体采用省卷的城市名单。"
+      },
+      "version": "粤教考函〔2026〕1号；2页盖章PDF；东莞市招考办2026-01-20翻印",
+      "sourceType": "official_original_pdf_hosted_by_municipal_education_bureau",
+      "sha256": "940e9bd9556e68d2a00a6dcb460a81758072a7a25d65fe757cc43755f6e8430a",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "gz-2024-2026-exam-scheme-qa",
+      "title": "《广州市初中学业水平考试录取计分笔试科目考试实施方案》问答",
+      "url": "https://gzzk.gz.gov.cn/zkzz/zkxx/zkzx/content/post_9455050.html",
+      "publisher": "广州市教育局",
+      "publishedDate": "2024-01-22",
+      "retrievedAt": "2026-11-02T06:45:20.855Z",
+      "readScope": {
+        "method": "Ego专用TaskSpace真实打开，读取八问及表格；另截图实际查看数学行及合并单元格",
+        "detailedSections": [
+          "第一问背景",
+          "第三问对象",
+          "第五问分值/方式表",
+          "第六问时间表",
+          "第七问内容范围"
+        ],
+        "excluded": "这是官方问答，不是实施方案全文及所有附件；未使用2027—2029年新方案，未复制原题。"
+      },
+      "version": "官方问答；网页2024-01-22 23:35:06；明确适用2024—2026年",
+      "sourceType": "official_policy_qa",
+      "sha256": "5621b8c66b7c30ff238a41f78fcc23bd786805bd5b7951c34bcc0e337f49d1ff",
+      "snapshot": "private-source-not-published"
+    },
+    {
+      "id": "sz-2026-zhongkao-notice",
+      "title": "深圳市教育局关于做好2026年高中阶段学校考试招生工作的通知",
+      "url": "https://szeb.sz.gov.cn/szszsksbgs/zkcx/zkzz/szs2026nzkzcjwsxc/zcfg/content/post_12803037.html",
+      "publisher": "深圳市教育局",
+      "publishedDate": "2026-03-16",
+      "retrievedAt": "2026-11-02T06:43:29.537Z",
+      "readScope": {
+        "method": "Ego专用TaskSpace真实打开正文，下载通知内考试时间表PNG并实际查看",
+        "detailedSections": [
+          "四、考试（一）科目及方式",
+          "四、考试（二）具体安排图",
+          "四、考试（三）成绩呈现",
+          "四、考试（五）考试组织",
+          "六、工作要求（二）（六）"
+        ],
+        "excluded": "附录虽随页面保存，不用其作数学范围判断；没有数学原卷或逐题分析。"
+      },
+      "version": "深教〔2026〕34号；正文落款2026-03-13，网页发布2026-03-16",
+      "sourceType": "official_policy",
+      "sha256": "2b4fce14b31fbb08f80914ecfa10e066edcbeafba9d57bf197957da7d99f2235",
+      "snapshot": "private-source-not-published"
+    }
+  ],
+  "facts": [
+    {
+      "id": "primary-transition-admission-2026",
+      "regions": [
+        "CN"
+      ],
+      "nationalMainland": true,
+      "examTypes": [
+        "transition"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "admission",
+      "text": "2026年通知要求义务教育免试就近入学，并规范特定类型招生。本产品的小升初入口做小学达标与初中衔接，不把它包装成全国统一文化选拔考试。",
+      "sourceIds": [
+        "MOE_ADMISSION_2026"
+      ],
+      "locator": "二（二）严禁各类违规招生；二（三）严格规范特定类型招生",
+      "alignment": "official_rule_product_interpretation"
+    },
+    {
+      "id": "ZJ26_MATH_PAPER_I",
+      "regions": [
+        "CN-ZJ"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "2026浙江普通高考数学由教育部统一命题，选用“全国新高考Ⅰ卷”。",
+      "sourceIds": [
+        "zhejiang-2026-admissions"
+      ],
+      "locator": "考试安排→考试科目和考试时间，末段",
+      "alignment": "official_rule",
+      "limit": "只证明浙江2026数学卷种，不证明别省，也不自动统一历史卷名别称。",
+      "includeDescendants": true
+    },
+    {
+      "id": "ZJ26_MATH_SCORE_ATTEMPT",
+      "regions": [
+        "CN-ZJ"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "2026浙江高考数学满分150分，提供1次考试机会，成绩当年有效。",
+      "sourceIds": [
+        "zhejiang-2026-admissions"
+      ],
+      "locator": "考试安排→考试科目和考试时间，分值与成绩效力段",
+      "alignment": "official_rule",
+      "limit": "仅所列地区与年份，不表示完整知识点/考法已核。",
+      "includeDescendants": true
+    },
+    {
+      "id": "BJ26_MATH_LOCAL",
+      "regions": [
+        "CN-BJ"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "2026北京高考受教育部委托自主命题，同节明确统一高考含数学，据此映射北京数学自主命题。",
+      "sourceIds": [
+        "beijing-2026-admissions"
+      ],
+      "locator": "三、考试与评卷，首两段",
+      "alignment": "official_rule",
+      "limit": "数学限定。非英语外语另有全国卷规定，不泛化到所有科目。“北京自主卷”为作者规范化简称，非通知给出的试卷封面全名。"
+    },
+    {
+      "id": "BJ26_MATH_SCORE",
+      "regions": [
+        "CN-BJ"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "2026北京统一高考数学满分150分。",
+      "sourceIds": [
+        "beijing-2026-admissions"
+      ],
+      "locator": "三、考试与评卷→（四）成绩",
+      "alignment": "official_rule",
+      "limit": "仅所列地区与年份，不表示完整知识点/考法已核。"
+    },
+    {
+      "id": "MOE26_EXAM_CONTENT_DIRECTION",
+      "regions": [
+        "CN"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "topics",
+      "text": "2026通知要求教考衔接，考查基础知识、技能和方法，并加强项目式、探究式真实情境问题设计。 我们将这类方向关联到S18真实条件建模；这是作者主题连接，不是官方对本课的逐点认定。",
+      "sourceIds": [
+        "moe-2026-admissions-notice"
+      ],
+      "locator": "第三部分第7项",
+      "alignment": "author_theme_link",
+      "limit": "只能支持作者主题对齐，不是官方对既有具体单元/知识点或学习效果的认证。",
+      "nationalMainland": true,
+      "pointIds": [
+        "S18-a",
+        "S18-b",
+        "S18-e"
+      ]
+    },
+    {
+      "id": "SH26_MATH_SCORE_NO_ARTS_SCIENCE_SPLIT",
+      "regions": [
+        "CN-SH"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "2026上海秋季统一考试数学满分150分，不分文理；本科及仅报高职（专科）条款均作规定。",
+      "sourceIds": [
+        "shanghai-2026-autumn-rules-attachment"
+      ],
+      "locator": "附件二、考生报名与考试→（二）考试类别与科目→1.本科、2.高职（专科）；OOXML第42、44段",
+      "alignment": "official_rule",
+      "limit": "不能用分值或不分文理证明自主卷；不适用于春季、成人或三校生考试。"
+    },
+    {
+      "id": "SH26_MATH_SCHEDULE",
+      "regions": [
+        "CN-SH"
+      ],
+      "examTypes": [
+        "gaokao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "工作办法列明2026上海秋季招生统考数学时间为6月7日15:00–17:00。",
+      "sourceIds": [
+        "shanghai-2026-autumn-rules-attachment"
+      ],
+      "locator": "附件二→（二）→3.考试时间安排；OOXML第46、48段",
+      "alignment": "official_rule",
+      "limit": "证明正式安排，不冒称本轮观察到实际实施。"
+    },
+    {
+      "id": "BJ-01",
+      "regions": [
+        "CN-BJ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "2026年北京市中招录取计分科目包括数学，数学科目满分100分。",
+      "sourceIds": [
+        "bj-2026-enrolment-policy"
+      ],
+      "locator": "三、考试工作（二）",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "BJ-03",
+      "regions": [
+        "CN-BJ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "北京教育考试院负责文化课科目的命题和统一评分标准、细则；各区组织评卷并执行全市统一标准。",
+      "sourceIds": [
+        "bj-2026-enrolment-policy"
+      ],
+      "locator": "四、命题和评卷工作; 四、命题和评卷工作",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "SH-01",
+      "regions": [
+        "CN-SH"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "上海2026年学业考试的数学等指定科目统一命题、统一考试、统一评卷。",
+      "sourceIds": [
+        "sh-2026-enrolment-opinions"
+      ],
+      "locator": "一、评价工作（一）学业评价",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "SH-02",
+      "regions": [
+        "CN-SH"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "topics",
+      "text": "当年命题政策要求依据课程标准，体现学科核心素养、能力导向及具体情境中的综合分析和解决问题；结构简明、题量适当、难度稳定。 对应到本课J19建模与条件检验是作者主题连接，不是官方逐题指定。",
+      "sourceIds": [
+        "sh-2026-enrolment-opinions"
+      ],
+      "locator": "一、评价工作（一）学业评价; 一、评价工作（一）学业评价; 一、评价工作（一）学业评价",
+      "alignment": "author_theme_link",
+      "pointIds": [
+        "J19-a",
+        "J19-b",
+        "J19-e"
+      ]
+    },
+    {
+      "id": "SH-03",
+      "regions": [
+        "CN-SH"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "2026年上海数学科目安排在6月21日14:00—15:40；同日时间差为100分钟。",
+      "sourceIds": [
+        "sh-2026-exam-announcement"
+      ],
+      "locator": "首部时间表：日期栏; 首部时间表：6月21日下午数学行",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GD-01",
+      "regions": [
+        "CN-GD",
+        "CN-GD-PROV"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "通知限定的是2026年省统一命题地市的语文、数学等九个科目时间安排；“广东省”不能单独作为全省数学试卷身份。",
+      "sourceIds": [
+        "gd-2026-exam-schedule"
+      ],
+      "locator": "PDF第1页首段",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GD-02",
+      "regions": [
+        "CN-GD-PROV"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "广东省统一命题地市数学安排在2026年7月1日下午15:00—17:00，明确标注120分钟。",
+      "sourceIds": [
+        "gd-2026-exam-schedule"
+      ],
+      "locator": "PDF第1页时间表：7月1日日期栏; PDF第1页时间表：数学行; 时间表7月1日（星期三）下午数学行；已逐张查看。",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GD-03",
+      "regions": [
+        "CN-GD",
+        "CN-GD-PROV"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "非省统一命题地市的相应科目考试时间，由相关市自行确定。",
+      "sourceIds": [
+        "gd-2026-exam-schedule"
+      ],
+      "locator": "PDF第2页首段",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GZ-02",
+      "regions": [
+        "CN-GD-GZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "field": "paper",
+      "text": "广州继续自主命题；省级改革文件所列广州自主命题九科包括数学。",
+      "sourceIds": [
+        "gz-2024-2026-exam-scheme-qa"
+      ],
+      "locator": "第一问; 第二问（一）1",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GZ-03",
+      "regions": [
+        "CN-GD-GZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "field": "format",
+      "text": "广州2024—2026年方案中的数学满分120分，闭卷笔试，时长120分钟，安排在考试第二天上午9:00—11:00。",
+      "sourceIds": [
+        "gz-2024-2026-exam-scheme-qa"
+      ],
+      "locator": "上表数学行：120分；“闭卷笔试”单元格跨语文、数学两行。下表第二天上午：9:00—11:00、120分钟、数学、120分。; 第六问考试时间表：数学行",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "GZ-04",
+      "regions": [
+        "CN-GD-GZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "field": "curriculum",
+      "text": "该方案按《义务教育课程方案和课程标准（2022年版）》命题；强调核心素养、思维过程、创新意识和真实情境问题解决，减少单纯记忆和机械训练性质试题。 对应到本课J19建模与条件检验是作者主题连接，不是官方逐题指定。",
+      "sourceIds": [
+        "gz-2024-2026-exam-scheme-qa"
+      ],
+      "locator": "第七问; 第七问; 第七问",
+      "alignment": "author_theme_link",
+      "pointIds": [
+        "J19-a",
+        "J19-b",
+        "J19-e"
+      ]
+    },
+    {
+      "id": "SZ-01",
+      "regions": [
+        "CN-GD-SZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "深圳2026年数学为闭卷笔试，数学满分100分。",
+      "sourceIds": [
+        "sz-2026-zhongkao-notice"
+      ],
+      "locator": "四、考试（一）; 四、考试（三）1",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "SZ-02",
+      "regions": [
+        "CN-GD-SZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "format",
+      "text": "通知内时间表将数学安排在2026年6月27日9:00—10:30；由该时段可计算为90分钟。",
+      "sourceIds": [
+        "sz-2026-zhongkao-notice"
+      ],
+      "locator": "图中6月27日（星期六）上午：数学9:00—10:30；完整图已实际查看。",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "SZ-03",
+      "regions": [
+        "CN-GD-SZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "paper",
+      "text": "深圳市招考办统筹中考组织，各区落实考点；命题及评卷由深圳市教科院组织，网上评卷。因此应保留深圳市级命题实施身份。",
+      "sourceIds": [
+        "sz-2026-zhongkao-notice"
+      ],
+      "locator": "四、考试（五）; 六、工作要求（二）; 六、工作要求（二）",
+      "alignment": "official_rule"
+    },
+    {
+      "id": "SZ-04",
+      "regions": [
+        "CN-GD-SZ"
+      ],
+      "examTypes": [
+        "zhongkao"
+      ],
+      "years": [
+        2026
+      ],
+      "field": "curriculum",
+      "text": "通知明确不得提前结束课程或擅自删减非考试的教学内容；考试计分目录不能替代完整教学范围。",
+      "sourceIds": [
+        "sz-2026-zhongkao-notice"
+      ],
+      "locator": "六、工作要求（六）",
+      "alignment": "official_rule"
+    }
+  ],
+  "unknownDimensions": [
+    "各地区逐知识点考查范围、深度与具体题型",
+    "教材版本和适用学年、校本教学安排",
+    "五四/六三学制下逐年级数学顺序",
+    "所有年度试卷与适用考区映射",
+    "真实学习者独立掌握、保持及考试常模"
+  ],
+  "completeNationalCoverage": false,
+  "completeLocalCoverage": false,
+  "navigationGraph": {
+    "id": "paper-world-r20-curriculum-20261030",
+    "originalNodeCount": 166,
+    "mathNavigationNodeCount": 22,
+    "reference": "../../curriculum/curriculum.json",
+    "boundary": "沿旧粗粒度节点作主题连接；复数S08在旧22节点没有准确锚点，保留未映射，不硬塞集合节点。"
+  }
+}

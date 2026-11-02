@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>纸页之间 · 从好奇的地方出发</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./journey.css">
+  <link rel="stylesheet" href="./math-course/course.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./index.html"><span class="mark">◒</span><span>纸页之间<small>从好奇的地方出发</small></span></a>
+    <span class="top-promise">从生活里的好奇出发，动手理解知识。</span>
+    <div class="header-actions"><button id="math-course-open">数学全程</button><button id="route-open">我的路线</button><button id="worlds-open">世界图鉴</button></div>
+  </header>
+  <main>
+    <p id="product-one-line" class="product-one-line">走进生活小世界，动手发现知识。</p>
+    <div class="route-ribbon"><span id="route-context"></span><button id="change-start">换个起点 ↗</button></div>
+    <section class="scene-heading">
+      <div class="lesson-introduction">
+        <p class="eyebrow" id="world"></p><h1 id="title">正在翻开数学世界…</h1>
+        <div class="lesson-brief" aria-label="这节你要做什么">
+          <p class="lesson-brief-label">这节你要做什么</p>
+          <p id="lesson-brief-text"></p>
+        </div>
+      </div>
+      <div class="stage-note"><span id="stage"></span><button id="lesson-action" class="lesson-primary">载入本节任务…</button><small id="experience-status">正在打开这一页…</small></div>
+    </section>
+    <div class="spread">
+      <section class="world-viewport" aria-label="可转动的三维数学原型">
+        <canvas id="world-canvas" tabindex="0" aria-label="三维世界：拖动绕看，滚轮拉近；野餐时可拿杯子放在桌垫上，键盘回车取放，左右方向键选位"></canvas>
+        <div class="corner-label"><b id="scene-number"></b><span id="state-name">操作前</span></div>
+        <div class="views" aria-label="换角度看">
+          <button data-view="perspective" aria-label="回到立体视角">立体</button>
+          <button data-view="front" aria-label="从正面看">正面</button>
+          <button data-view="top" aria-label="从上面俯看">俯看</button>
+          <button data-view="side" aria-label="从侧面看">侧面</button>
+        </div>
+        <div id="load-status" role="status">载入原来的纸艺世界…</div>
+        <div id="error" hidden role="alert"></div>
+        <div class="canvas-help" id="canvas-help">拖动空白处绕看 · 滚轮拉近</div>
+        <div id="welcome-card" hidden>
+          <p class="eyebrow">一本小书 · 一个大世界</p>
+          <h2>今天，从哪份好奇开始？</h2>
+          <p id="welcome-description">先试试林间野餐，也可以从你熟悉的程度出发。</p>
+          <button id="welcome-start">翻开这一页 →</button>
+          <button id="welcome-change" class="quiet">按我的程度出发</button>
+        </div>
+        <div class="activity-toast" id="activity-toast" role="status" aria-live="polite" hidden></div>
+      </section>
+      <aside class="notebook" id="math-notebook" hidden>
+        <div class="paper-tab">这一次，看懂一件事</div>
+        <h2 id="state-caption"></h2>
+        <div id="equation"></div>
+        <div class="divider"></div>
+        <p class="note-label">这件事会连接到</p>
+        <p id="concepts"></p>
+        <details><summary>这节要想明白什么？</summary><p id="question"></p></details>
+        <details><summary>先需要会什么？</summary><p id="prerequisites"></p></details>
+        <details><summary>换个情境，自己试试</summary><p id="transfer"></p></details>
+        <details class="model-boundary"><summary>这张原型的模型与范围</summary><p id="boundary" class="boundary"></p></details>
+      </aside>
+    </div>
+    <div class="learning-tools"><button id="guide-help">给我一点提示</button><button id="undo-action" hidden>放回刚才那只</button><button id="math-open" aria-expanded="false" aria-controls="math-notebook">看看其中的数学</button><button id="sound-toggle" aria-pressed="false">声音：关</button><button id="preview-open" aria-expanded="false">原型预演工具</button></div>
+    <section class="action-bar" id="preview-tools" hidden aria-label="原型的前后状态与连续预演">
+      <div class="action-copy"><span>拖动进度条，预演这个动作</span><strong id="action-label"></strong></div>
+      <div class="progress-control">
+        <div class="state-buttons"><button id="before">操作前</button><button id="after">操作后</button></div>
+        <input id="progress" type="range" min="0" max="100" value="0" aria-label="原型动作进度">
+        <small>拖动预演；不会判分或记录孩子表现</small>
+      </div>
+      <div class="page-controls"><button id="previous" aria-label="上一幅原型">←</button><span id="page-index"></span><button id="next" aria-label="下一幅原型">→</button></div>
+    </section>
+    <section class="next-page" aria-label="当前课程与下一步"><div><small>这一页之后</small><strong id="next-title"></strong><p id="next-reason"></p></div><button id="next-lesson">翻到下一站 →</button></section>
+    <footer><span id="learning-record">保留做过什么，不把翻页当成学会。</span><a href="../atlas.html">教师与设计图册 ↗</a></footer>
+  </main>
+  <dialog id="route-dialog" aria-labelledby="route-dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="关闭路线">×</button></form>
+    <p class="eyebrow">不必都从同一页开始</p><h2 id="route-dialog-title">找到适合你的这一站</h2>
+    <p>年级只是推荐。已经会了可以往前走，遇到不熟悉的地方再回来。</p>
+    <div class="start-controls"><label>我的年级<select id="grade-choice"><option value="">先不按年级</option><option value="1">一年级</option><option value="2">二年级</option><option value="3">三年级</option><option value="4">四年级</option><option value="5">五年级</option><option value="6">六年级</option><option value="7">七年级</option><option value="8">八年级</option><option value="9">九年级</option><option value="10">高一</option><option value="11">高二</option><option value="12">高三</option></select></label><label>更想试试<select id="interest-choice"><option value="">跟着我的起点</option></select></label></div>
+    <label class="foundation-choice"><input type="checkbox" id="foundation-choice"> 这个方向，我想从基础补一补</label>
+    <div class="start-recommendation"><small>建议从这里试试 · 不是能力测评</small><h3 id="recommend-title"></h3><p id="recommend-reason"></p><button id="enter-recommendation">从这里出发 →</button></div>
+    <div id="path-strip" class="path-strip"></div>
+    <details class="graph-disclosure"><summary>展开全科知识脉络</summary><p class="small-note">沿用已有166节点全科图谱。图谱节点、已制作预演、完成过活动是不同的事。</p><label>看哪门学科<select id="subject-choice"></select></label><div id="graph-nodes"></div></details>
+    <details class="graph-disclosure"><summary>查看原来的72个数学原型</summary><nav id="volumes" aria-label="六卷数学原型"></nav><div id="all-scenes"></div></details>
+  </dialog>
+  <dialog id="worlds-dialog" aria-labelledby="worlds-dialog-title">
+    <form method="dialog"><button class="dialog-close" aria-label="关闭世界图鉴">×</button></form>
+    <p class="eyebrow">相同的操作习惯 · 不同世界的气质</p><h2 id="worlds-dialog-title">下一本书，去哪里？</h2>
+    <p id="world-theme-context">这里先试三种野餐氛围；选择不改变当前学习位置。下方120个主题是待制作的世界设计，不代表已经能玩。</p>
+    <div id="live-worlds" class="live-worlds"></div>
+    <details class="graph-disclosure"><summary id="world-library-summary">展开120个主题世界设计</summary><label>世界家族<select id="family-choice"></select></label><div id="world-library"></div></details>
+  </dialog>
+  <noscript>这个可操作的3D世界需要启用JavaScript；完整原型仍可打开上级目录的PDF图册。</noscript>
+  <script src="./entry.bundle.js" defer></script>
+</body>
+</html>

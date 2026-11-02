@@ -1,0 +1,103 @@
+/* The interface stays familiar; the book's world supplies its own atmosphere. */
+[hidden]{display:none!important}
+html{scroll-padding-top:90px}
+button,input,summary{scroll-margin-top:100px}
+body{background:#f7f2e6;color:#304c43}
+.top{height:80px;max-width:none;padding:0 max(24px,calc((100vw - 1440px)/2));border-bottom:1px solid #e2ddcf;gap:24px;position:sticky;top:0;z-index:30;background:#f7f2e6}
+.brand{min-width:180px}.brand .mark{font-size:35px;color:#ba8a4f}.brand small{letter-spacing:.15em;font-size:10px}
+.top-promise{flex:1;text-align:center;color:#8c8c77;font-size:12px}
+.header-actions{display:flex;gap:8px}.header-actions button{background:none;border:0;font-size:13px;color:#5c7264;padding:10px}
+main{max-width:1440px;padding:18px 32px 0}
+.product-one-line{display:none}
+.route-ribbon{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:#87907a}
+.route-ribbon button{background:none;border:none;padding:4px;color:#758574;font-size:12px}
+.scene-heading{min-height:0;margin:19px 0 19px;gap:24px;align-items:center}
+.scene-heading h1{font-size:clamp(23px,2.4vw,34px);letter-spacing:.015em;margin:4px 0 8px}
+.scene-heading .eyebrow{font-size:11px;color:#9e8053}
+.lesson-brief{border:0;padding:0;margin:0;max-width:850px}
+.lesson-brief-label{display:none}#lesson-brief-text{font-size:14px;line-height:1.8;max-width:740px}
+.stage-note{flex:none;min-width:180px}.stage-note>span{font-size:11px;border:0;background:none;padding:0;color:#81846e}
+.stage-note .lesson-primary{margin-top:9px;min-height:48px;padding:12px 25px;border-radius:7px;font-size:15px;box-shadow:0 2px 0 #cad0ba}
+.stage-note small{font-size:10px;margin-top:9px;color:#8d917e}
+.spread{display:grid;grid-template-columns:1fr;gap:20px}
+.spread:has(.notebook:not([hidden])){grid-template-columns:minmax(0,1fr) 286px}
+.world-viewport{height:clamp(460px,66vh,750px);border:1px solid #d7dbca;border-radius:14px;position:relative;isolation:isolate;background:#e4e8d4;overflow:hidden}
+.world-viewport canvas{touch-action:none;outline-offset:-3px}
+.notebook{height:auto;max-height:750px;background:#fff9ea;border-radius:12px;border:1px solid #dfd6bd}
+.corner-label{font-size:10px;opacity:.72;left:16px;top:16px}
+.corner-label b{font-size:15px;font-weight:400}
+.views{top:13px;right:13px;gap:3px}.views button{background:#fffdf0c9;border:0;border-radius:5px;font-size:10px;padding:7px 9px}
+.canvas-help{bottom:12px;left:16px;max-width:calc(100% - 32px);background:#fffef0bd;color:#67745d;border-radius:6px;font-size:10px;padding:6px 9px}
+.learning-tools{display:flex;align-items:center;gap:6px;margin-top:10px;min-height:40px;flex-wrap:wrap}
+.learning-tools button{background:none;border:0;color:#77836e;font-size:12px;padding:9px 10px;border-radius:5px}
+.learning-tools button:hover{background:#e9ecdf;color:#3f5e47}
+.learning-tools button:focus-visible,.header-actions button:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid #b68946;outline-offset:3px}
+.learning-tools #sound-toggle{margin-left:auto}
+.action-bar{margin:8px 0 15px;border:1px dashed #d6d6c7;padding:14px;border-radius:10px}
+.next-page{border-top:1px solid #e0dfd2;margin-top:10px;padding:18px 0 10px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.next-page small{font-size:10px;display:block;color:#9b8864;letter-spacing:.1em;margin-bottom:4px}
+.next-page strong{font-family:Georgia,"Songti SC",serif;font-size:19px;font-weight:500}
+.next-page p{font-size:12px;color:#7f8776;margin:5px 0;max-width:720px}
+.next-page button{background:#e8eddf;border:0;font-size:13px;border-radius:6px;padding:12px 17px;white-space:nowrap;color:#47634d}
+footer{font-size:10px;color:#9b9e8d;padding:14px 0 20px;display:flex;justify-content:space-between;gap:10px}
+footer a{color:inherit;text-decoration:none}
+.activity-toast{position:absolute;left:50%;transform:translateX(-50%);bottom:47px;padding:10px 16px;font-size:13px;line-height:1.6;background:#fffbedf2;color:#486247;border:1px solid #dfd5bb;border-radius:10px;box-shadow:0 5px 25px #29482710;width:max-content;max-width:70%;pointer-events:none}
+#welcome-card{position:absolute;left:5%;top:9%;max-width:355px;background:#fffbeded;border:1px solid #e8dfc4;border-radius:14px;padding:25px 29px;box-shadow:0 10px 40px #3a4d2120}
+#welcome-card h2{font:500 28px/1.45 Georgia,"Songti SC",serif;margin:12px 0;color:#315144}
+#welcome-card p{font-size:13px;line-height:1.8;color:#70816b}
+#welcome-card button{display:block;margin-top:17px;background:#315346;color:#fff7e2;border:0;border-radius:7px;padding:12px 21px;font-size:14px}
+#welcome-card button.quiet{background:none;color:#7c8066;font-size:12px;padding:0;margin-top:14px}
+dialog{border:1px solid #d9d2bb;border-radius:18px;width:min(760px,calc(100vw - 32px));max-height:85vh;padding:32px;background:#faf7ed;color:#365345;box-shadow:0 20px 100px #2633244d}
+dialog::backdrop{background:#2539306b;backdrop-filter:blur(3px)}
+dialog .eyebrow{font-size:11px;color:#9b8257;letter-spacing:.12em}
+dialog h2{font:500 29px/1.4 Georgia,"Songti SC",serif;margin:8px 0 12px}
+dialog>p{font-size:13px;line-height:1.8;color:#7e8575;padding-right:14px}
+.dialog-close{position:absolute;top:14px;right:14px;border:0;background:none;font-size:25px;color:#7a816e;width:35px;height:35px}
+.start-controls{display:flex;gap:15px;margin-top:22px}
+dialog label{display:block;font-size:12px;color:#78866e}
+dialog select{display:block;width:100%;min-height:43px;border:1px solid #d9d7c7;border-radius:7px;background:#fffdf6;color:#365345;padding:9px 13px;margin:6px 0 12px;font-size:14px}
+.start-controls label{flex:1}
+.foundation-choice{display:flex;align-items:center;gap:8px;margin:0 0 14px;font-size:12px!important}
+.foundation-choice input{accent-color:#40654b;width:16px;height:16px}
+.start-recommendation{background:#edf0e2;border:1px solid #dfe5d1;border-radius:12px;padding:20px;margin:6px 0 24px}
+.start-recommendation small{font-size:10px;color:#829078}.start-recommendation h3{font:500 22px/1.4 Georgia,"Songti SC",serif;margin:8px 0}
+.start-recommendation p{font-size:13px;line-height:1.6;color:#75866d}
+.start-recommendation button{background:#365846;color:#fff7e5;border:0;border-radius:7px;padding:12px 20px}
+.path-strip{display:flex;gap:7px;align-items:stretch;margin:15px 0}
+.path-strip>div{flex:1;padding:11px;background:#f2eee0;border-radius:7px;min-width:0}
+.path-strip small{font-size:10px;color:#9d8a68;display:block}.path-strip strong{display:block;font-size:13px;line-height:1.6;font-weight:500;margin:5px 0}
+.path-strip p{font-size:11px;line-height:1.5;color:#89927e}
+.graph-disclosure{border-top:1px solid #e0dece;padding:15px 0}.graph-disclosure summary{font-size:14px;cursor:pointer;color:#597251;padding:4px 0}
+.small-note{font-size:11px;line-height:1.8;color:#89927a}.graph-disclosure>label{margin-top:15px}
+.graph-node,.world-entry{border-bottom:1px solid #e3e0d2;padding:14px 1px}
+.graph-node h4,.world-entry h4{font-size:15px;font-weight:500;margin:2px 0 6px}
+.graph-node p,.world-entry p{font-size:12px;line-height:1.8;margin:3px 0;color:#78826e}
+.graph-node button{font-size:11px;margin:5px 5px 0 0;background:#e8ecd9;color:#466246;border:0;padding:7px 11px;border-radius:4px}
+.graph-node small,.world-entry small{font-size:10px;color:#a18c64}
+#all-scenes{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+#all-scenes button{background:#f1efe2;border:0;text-align:left;font-size:12px;line-height:1.5;padding:10px;color:#56714f;border-radius:5px}
+#volumes{display:flex;gap:5px;overflow:auto;justify-content:flex-start;margin:10px 0}#volumes a{font-size:10px;padding:6px 8px;white-space:nowrap}
+.live-worlds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
+.live-worlds button{min-height:150px;padding:18px 13px;text-align:left;border:1px solid #d8dac8;border-radius:10px;color:#4f674e;background:linear-gradient(135deg,#e7e8c6,#cbd7b9)}
+.live-worlds button[data-theme=ink]{background:linear-gradient(135deg,#edefe7,#bdc9c3)}
+.live-worlds button[data-theme=lantern]{background:linear-gradient(135deg,#294359,#172c42);color:#e7d5a8;border-color:#6a7f89}
+.live-worlds button[aria-pressed=true]{outline:2px solid #b49358;outline-offset:2px}
+.live-worlds strong{font:500 20px Georgia,"Songti SC",serif;display:block;margin-bottom:10px}
+.live-worlds span{display:block;font-size:11px;line-height:1.8;opacity:.83}.live-worlds small{display:block;margin-top:14px;font-size:10px;opacity:.7}
+@media(max-width:760px){
+  .top{padding:0 16px;min-height:68px;height:68px;gap:10px}.top-promise{display:none}.brand{min-width:0;flex:1}.brand small{font-size:8px}
+  .header-actions{gap:0}.header-actions button{font-size:11px;padding:9px 7px}
+  main{padding:13px 15px 0}.route-ribbon{font-size:10px}.route-ribbon button{font-size:10px}.scene-heading{margin:14px 0;display:block}
+  .scene-heading h1{font-size:24px}.scene-heading .eyebrow{font-size:10px}#lesson-brief-text{font-size:13px;line-height:1.7}
+  .stage-note{display:flex;align-items:center;gap:10px;min-width:0;margin-top:13px}.stage-note>span{display:none}
+  .stage-note .lesson-primary{margin:0;padding:10px 18px;min-height:43px;font-size:13px}
+  .stage-note small{width:auto;max-width:44%;font-size:9px;margin:0}
+  .world-viewport{height:480px;border-radius:11px}.spread:has(.notebook:not([hidden])){grid-template-columns:1fr}
+  .notebook{max-height:380px}.canvas-help{font-size:8px;left:8px;padding:5px 7px}.corner-label{left:10px;top:10px}.views{right:7px;top:8px}.views button{font-size:9px;padding:7px}
+  .activity-toast{bottom:38px;font-size:11px;max-width:85%;padding:9px 11px}.learning-tools{gap:1px}.learning-tools button{font-size:10px;padding:8px 6px}
+  .next-page{gap:15px;padding:14px 0 6px}.next-page strong{font-size:16px}.next-page p{font-size:10px}.next-page button{font-size:11px;padding:10px}
+  footer{font-size:8px}.start-controls{gap:8px}.live-worlds{grid-template-columns:1fr}.live-worlds button{min-height:105px}
+  dialog{padding:25px 19px}dialog h2{font-size:24px}.path-strip{gap:5px}.path-strip>div{padding:8px}.path-strip strong{font-size:11px}.path-strip p{font-size:10px}
+  #welcome-card{left:5%;top:11%;max-width:90%;padding:21px 23px}#welcome-card h2{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
